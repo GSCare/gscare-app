@@ -11,4 +11,4 @@
 }
 ```
 
- - modificar a versao do native-base para: "native-base": "^3.3.0",
+ - caso continue o erro: Modificar a versao do native-base para: "native-base": "^3.3.0",
