@@ -1,4 +1,5 @@
 import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base'
+import { color } from 'native-base/lib/typescript/theme/styled-system';
 
 type Props = IButtonProps & {
   title: string;
@@ -10,17 +11,17 @@ export function Button({title, variant = "solid", ...rest}: Props) {
     <ButtonNativeBase 
       w="full"
       h={14}
-      bg={variant === "outline" ? "transparent" : "green.700" }
+      bg={variant === "outline" ? "transparent" : "Orange" }
       borderWidth={variant === "outline" ? 1 : 0}
-      borderColor="green.500"
+      borderColor="Orange"
       rounded="sm"
       _pressed={{
-        bg: variant === "outline" ? "gray.500" : "green.500"
+        bg: variant === "outline" ? "Orange50" : "AmberOrange"
       }}
       {...rest}
     >
       <Text
-        color={ variant === "outline" ? "green.500" : "white"}
+        color={ variant === "outline" ? "Orange" : "white"}
         fontFamily="heading"
         fontSize="sm"
       >
