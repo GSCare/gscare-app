@@ -5,7 +5,7 @@ import { Input } from '@components/Input'
 
 export function SignIn() {
   return (
-    <VStack flex={1} bg="blue.400">
+    <VStack flex={1} bg="blue.400" px={10}>
 
       <Center my={24}>
         <LogoSvg width={200} height={50}/>
@@ -20,8 +20,17 @@ export function SignIn() {
           Acesse sua conta
         </Heading>
 
-        <Input placeholder="E-mal" />
-        <Input placeholder="Senha" />
+        <Input 
+          placeholder="E-mal" 
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+
+        <Input 
+          placeholder="Senha"
+          secureTextEntry
+        />
+
       </Center>
 
     </VStack>
