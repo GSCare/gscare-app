@@ -1,9 +1,9 @@
 import { Center, Text } from "native-base";
 
-export function Calendario() {
+export function Settings() {
   return (
     <Center flex={1}>
-      <Text>Settings</Text>
+      <Text>configurações</Text>
     </Center>
   )
 }
