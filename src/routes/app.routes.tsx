@@ -11,7 +11,7 @@ import { PatientsMedicalDocuments } from "@screens/PatientsMedicalDocuments";
 import { Profile } from "@screens/Profile";
 import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
-import { MedicationSchedules } from "@screens/medicationSchedules";
+import { MedicationSchedules } from "@screens/MedicationSchedules";
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
