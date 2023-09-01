@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import { Home } from "@screens/Home";
 import { AttendanceCalendar } from "@screens/AttendanceCalendar";
@@ -13,11 +13,27 @@ import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 
-const { Navigator, Screen } = createBottomTabNavigator()
+type AppRoutes = {
+  home: undefined;
+  attendanceCalendar: undefined;
+  clientsPathologies: undefined;
+  complaintsAndNotices: undefined;
+  dailyReport: undefined;
+  emergencyPhones: undefined;
+  foodAndMedicineAllergies: undefined;
+  patientsMedicalDocuments: undefined;
+  profile: undefined;
+  settings: undefined;
+  supplyMonitoring: undefined;
+  medicationSchedules: undefined;
+}
+
+export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
+
+const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>()
 
 export function AppRoutes() {
   return (
-    // Criando rotas do App
     <Navigator>
       <Screen 
         name="home" 
