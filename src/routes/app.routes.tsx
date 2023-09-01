@@ -1,3 +1,4 @@
+import { Platform } from 'react-native'
 import { useTheme } from "native-base"
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
@@ -47,7 +48,14 @@ export function AppRoutes() {
       headerShown: false, 
       tabBarShowLabel: false,
       tabBarActiveTintColor: colors.blue[600],
-      tabBarInactiveTintColor: colors.gray[100]
+      tabBarInactiveTintColor: colors.gray[200],
+      tabBarStyle: {
+        backgroundColor: colors.gray[600],
+        borderTopWidth: 0,
+        height: Platform.OS === 'android' ? 'auto' : 96,
+        paddingBottom: sizes[10],
+        paddingTop: sizes[6]
+      }
     }}>
       <Screen 
         name="home" 
@@ -79,83 +87,47 @@ export function AppRoutes() {
       <Screen 
         name="complaintsAndNotices" 
         component={ComplaintsAndNotices} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="dailyReport" 
         component={DailyReport} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="emergencyPhones" 
         component={EmergencyPhones} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="foodAndMedicineAllergies" 
         component={FoodAndMedicineAllergies} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="patientsMedicalDocuments" 
         component={PatientsMedicalDocuments} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="profile" 
         component={Profile} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="settings" 
         component={Settings} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="supplyMonitoring" 
         component={SupplyMonitoring} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="medicationSchedules" 
         component={MedicationSchedules} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
+        options={{ tabBarButton: () => null }}
       />
     </Navigator>
   )
