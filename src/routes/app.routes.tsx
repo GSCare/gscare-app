@@ -3,7 +3,7 @@ import { useTheme } from "native-base"
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import HomeSvg from "@assets/home.svg"
-import ClockSvg from "@assets/clock.svg"
+import ProfileSvg from "@assets/profile.svg"
 import CalendarSvg from "@assets/calendar.svg"
 
 import { Home } from "@screens/Home";
@@ -67,8 +67,8 @@ export function AppRoutes() {
         }}
       />
       <Screen 
-        name="attendanceCalendar" 
-        component={AttendanceCalendar} 
+        name="medicationSchedules" 
+        component={MedicationSchedules} 
         options={{
           tabBarIcon: ({ color }) => (
             <HomeSvg fill={color} width={iconSize} height={iconSize}/>
@@ -76,13 +76,36 @@ export function AppRoutes() {
         }}
       />
       <Screen 
-        name="clientsPathologies" 
-        component={ClientsPathologies} 
+        name="dailyReport" 
+        component={DailyReport} 
         options={{
           tabBarIcon: ({ color }) => (
             <HomeSvg fill={color} width={iconSize} height={iconSize}/>
           )
         }}
+      />
+      <Screen 
+        name="foodAndMedicineAllergies" 
+        component={FoodAndMedicineAllergies} 
+        options={{
+          tabBarIcon: ({ color }) => (
+            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
+          )
+        }}
+      />
+      <Screen 
+        name="attendanceCalendar" 
+        component={AttendanceCalendar} 
+        options={{
+          tabBarIcon: ({ color }) => (
+            <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+          )
+        }}
+      />
+      <Screen 
+        name="clientsPathologies" 
+        component={ClientsPathologies} 
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="complaintsAndNotices" 
@@ -90,18 +113,8 @@ export function AppRoutes() {
         options={{ tabBarButton: () => null }}
       />
       <Screen 
-        name="dailyReport" 
-        component={DailyReport} 
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen 
         name="emergencyPhones" 
         component={EmergencyPhones} 
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen 
-        name="foodAndMedicineAllergies" 
-        component={FoodAndMedicineAllergies} 
         options={{ tabBarButton: () => null }}
       />
       <Screen 
@@ -122,11 +135,6 @@ export function AppRoutes() {
       <Screen 
         name="supplyMonitoring" 
         component={SupplyMonitoring} 
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen 
-        name="medicationSchedules" 
-        component={MedicationSchedules} 
         options={{ tabBarButton: () => null }}
       />
     </Navigator>
