@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { AppRoutes } from '@routes/app.routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,10 +25,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export function HomePage() {
-  const navigation = useNavigation<any>();
+type NavigationType = NavigationProp<AppRoutes>;
 
-  const handleButtonPress = (routeName: any) => {
+export function HomePage() {
+  const navigation = useNavigation<NavigationType>();
+
+  const handleButtonPress = (routeName: keyof AppRoutes) => {
     navigation.navigate(routeName);
   };
 
