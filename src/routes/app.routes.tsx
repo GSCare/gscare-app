@@ -19,7 +19,7 @@ import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 
-type AppRoutes = {
+export type AppRoutes = {
   home: undefined;
   attendanceCalendar: undefined;
   clientsPathologies: undefined;
