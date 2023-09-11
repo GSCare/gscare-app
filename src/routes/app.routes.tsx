@@ -53,10 +53,10 @@ export function AppRoutes() {
     <Navigator screenOptions={{ 
       headerShown: false, 
       tabBarShowLabel: false,
-      tabBarActiveTintColor: colors.blue[600],
-      tabBarInactiveTintColor: colors.gray[200],
+      tabBarActiveTintColor: colors.blue[300],
+      tabBarInactiveTintColor: colors.white,
       tabBarStyle: {
-        backgroundColor: colors.gray[600],
+        backgroundColor: colors.blue[500],
         borderTopWidth: 0,
         height: Platform.OS === 'android' ? 'auto' : 96,
         paddingBottom: sizes[10],
@@ -69,7 +69,7 @@ export function AppRoutes() {
         options={{
           tabBarIcon: ({ color }) => (
             // <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="home" size={6} m={2} color="#fff"/>
+            <Icon as={MaterialIcons} name="home" size={6} m={2} color={color}/>
           )
         }}
       />
@@ -79,7 +79,7 @@ export function AppRoutes() {
         options={{
           tabBarIcon: ({ color }) => (
             // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color="#fff"/>
+            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color={color}/>
           )
         }}
       />
@@ -89,7 +89,7 @@ export function AppRoutes() {
         options={{
           tabBarIcon: ({ color }) => (
             // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="menu" size={6} m={2} color="#fff"/>
+            <Icon as={MaterialIcons} name="menu" size={6} m={2} color={color}/>
           )
         }}
       />

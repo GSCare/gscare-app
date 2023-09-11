@@ -8,8 +8,8 @@ export function Routes() {
   const {colors} = useTheme()
 
   const theme = DefaultTheme;
-  theme.colors.background = "#084BB3"
-  // theme.colors.background = colors.blue[700]
+  // theme.colors.background = "#084BB3"
+  theme.colors.background = colors.blueGray[100]
 
   return (
     <Box flex={1} bg="navyBlue">

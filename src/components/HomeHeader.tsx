@@ -6,7 +6,7 @@ import { TouchableOpacity } from "react-native";
 
 export function HomeHeader() {
   return (
-    <HStack bg="gray.600" pt={16} pb={5} px={8} alignItems="center">
+    <HStack bg="blue.500" pt={16} pb={5} px={8} alignItems="center">
       <UserPhoto 
         size={16} 
         source={{ uri: 'https://github.com/feh-franc0.png' }}
@@ -15,23 +15,28 @@ export function HomeHeader() {
       />
 
       <VStack flex={1}>
-        <Text color="gray.100" fontSize="md">
+        <Text color="gray.100" fontSize="sm">
           Olá,
         </Text>
 
         <Heading color="gray.100" fontSize="md">
-          Home Care
+          John Doe
         </Heading>
+
+        
+        <Text color="orange.400" fontSize="xs">
+          Home Care TI
+        </Text>
       </VStack>
 
-      <TouchableOpacity>
+      {/* <TouchableOpacity>
         <Icon 
           as={MaterialIcons}
           name="logout"
           color="gray.200"
           size={7}
         />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </HStack>
   )
 }

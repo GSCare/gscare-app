@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { AppRoutes } from '@routes/app.routes';
-import { Center, HStack, VStack, Pressable } from 'native-base';
+import { Center, HStack, VStack, Pressable, Text } from 'native-base';
 import { Icon } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -24,13 +23,14 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('dailyReport')}
         >
-          <Icon as={MaterialIcons} name="calendar-today" size={8} m={2}/>
-          <Text>Relatorio diario</Text>
+          <Icon as={MaterialIcons} name="calendar-today" size={8} m={2} color={'blue.400'}/>
+          <Text textAlign='center' noOfLines={2}>Relatorio diario</Text>
         </Pressable>
 
         <Pressable
@@ -38,13 +38,14 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('clientsPathologies')}
         >
-          <Icon as={MaterialIcons} name="info-outline" size={8} m={2}/>
-          <Text>Patologias</Text>
+          <Icon as={MaterialIcons} name="info-outline" size={8} m={2} color={'blue.400'}/>
+          <Text textAlign='center' noOfLines={2}>Patologias do paciente</Text>
         </Pressable>
       </HStack>
 
@@ -54,16 +55,17 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('medicationSchedules')}
         >
           <Center>
             {/* <MaterialIcons name="menu" /> */}
-            <Icon as={MaterialIcons} name="timer" size={8} m={2}/>
+            <Icon as={MaterialIcons} name="timer" size={8} m={2} color={'blue.400'}/>
           </Center>
-          <Text>Horarios dos medicamentos</Text>
+          <Text textAlign='center' noOfLines={2}>Horarios dos medicamentos</Text>
         </Pressable>
 
         <Pressable
@@ -71,13 +73,14 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('patientsMedicalDocuments')}
         >
-        <Icon as={MaterialIcons} name="folder-shared" size={8} m={2}/>
-          <Text>Gestao de documentos do paciente</Text>
+        <Icon as={MaterialIcons} name="folder-shared" size={8} m={2} color={'blue.400'}/>
+          <Text textAlign='center' noOfLines={2}>Gestao de documentos do paciente</Text>
         </Pressable>
       </HStack>
 
@@ -87,13 +90,14 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('foodAndMedicineAllergies')}
         >
-          <Icon as={MaterialIcons} name="inventory" size={8} m={2}/>
-          <Text>Alergias medicas e alimentar</Text>
+          <Icon as={MaterialIcons} name="inventory" size={8} m={2} color={'blue.400'}/>
+          <Text textAlign='center' noOfLines={2}>Alergias medicas e alimentar</Text>
         </Pressable>
 
         <Pressable
@@ -101,13 +105,14 @@ export function HomePage() {
           h={150}
           borderRadius={5}
           m={2}
-          backgroundColor={'#ffffff'}
+          p={7}
+          justifyContent="space-between"
+          backgroundColor={'white'}
           alignItems="center"
-          justifyContent="center"
           onPress={() => handleButtonPress('emergencyPhones')}
         >
-          <Icon as={MaterialIcons} name="phone" size={8} m={2}/>
-          <Text>telefones de emergencia</Text>
+          <Icon as={MaterialIcons} name="phone" size={8} m={2} color={'blue.400'}/>
+          <Text textAlign='center' noOfLines={2}>telefones de emergencia</Text>
         </Pressable>
       </HStack>
     </VStack>
