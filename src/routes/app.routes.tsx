@@ -1,5 +1,5 @@
 import { Platform } from 'react-native'
-import { useTheme } from "native-base"
+import { Icon, useTheme } from "native-base"
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import HomeSvg from "@assets/home.svg"
@@ -19,6 +19,7 @@ import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from '@screens/PatientCalendar';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -67,7 +68,8 @@ export function AppRoutes() {
         component={Home} 
         options={{
           tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
+            // <HomeSvg fill={color} width={iconSize} height={iconSize}/>
+            <Icon as={MaterialIcons} name="home" size={6} m={2} color="#fff"/>
           )
         }}
       />
@@ -76,7 +78,8 @@ export function AppRoutes() {
         component={PatientCalendar} 
         options={{
           tabBarIcon: ({ color }) => (
-            <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+            // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color="#fff"/>
           )
         }}
       />
@@ -85,7 +88,8 @@ export function AppRoutes() {
         component={Settings} 
         options={{
           tabBarIcon: ({ color }) => (
-            <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+            // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+            <Icon as={MaterialIcons} name="menu" size={6} m={2} color="#fff"/>
           )
         }}
       />
