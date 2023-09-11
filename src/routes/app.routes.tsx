@@ -18,20 +18,25 @@ import { Profile } from "@screens/Profile";
 import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
+import { PatientCalendar } from '@screens/PatientCalendar';
 
 export type AppRoutes = {
+  // ? rotas que ficaram no rodape
   home: undefined;
+  patientCalendar: undefined; 
+  settings: undefined;
+  // ? rotas que ficaram nas divs da home
   attendanceCalendar: undefined;
   clientsPathologies: undefined;
-  complaintsAndNotices: undefined;
   dailyReport: undefined;
   emergencyPhones: undefined;
-  foodAndMedicineAllergies: undefined;
-  patientsMedicalDocuments: undefined;
-  profile: undefined;
-  settings: undefined;
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
+  // ! essas rotas abaixo só seram usadas na segunda versa
+  patientsMedicalDocuments: undefined;
+  foodAndMedicineAllergies: undefined;
+  complaintsAndNotices: undefined;
+  profile: undefined;
 }
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
@@ -67,40 +72,42 @@ export function AppRoutes() {
         }}
       />
       <Screen 
-        name="medicationSchedules" 
-        component={MedicationSchedules} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
-      />
-      <Screen 
-        name="dailyReport" 
-        component={DailyReport} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
-      />
-      <Screen 
-        name="foodAndMedicineAllergies" 
-        component={FoodAndMedicineAllergies} 
-        options={{
-          tabBarIcon: ({ color }) => (
-            <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-          )
-        }}
-      />
-      <Screen 
-        name="attendanceCalendar" 
-        component={AttendanceCalendar} 
+        name="patientCalendar" 
+        component={PatientCalendar} 
         options={{
           tabBarIcon: ({ color }) => (
             <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
           )
         }}
+      />
+      <Screen 
+        name="settings" 
+        component={Settings} 
+        options={{
+          tabBarIcon: ({ color }) => (
+            <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
+          )
+        }}
+      />
+      <Screen 
+        name="medicationSchedules" 
+        component={MedicationSchedules} 
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen 
+        name="dailyReport" 
+        component={DailyReport} 
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen 
+        name="foodAndMedicineAllergies" 
+        component={FoodAndMedicineAllergies} 
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen 
+        name="attendanceCalendar" 
+        component={AttendanceCalendar} 
+        options={{ tabBarButton: () => null }}
       />
       <Screen 
         name="clientsPathologies" 
@@ -125,11 +132,6 @@ export function AppRoutes() {
       <Screen 
         name="profile" 
         component={Profile} 
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen 
-        name="settings" 
-        component={Settings} 
         options={{ tabBarButton: () => null }}
       />
       <Screen 
