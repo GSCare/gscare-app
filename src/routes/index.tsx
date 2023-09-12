@@ -8,7 +8,6 @@ export function Routes() {
   const {colors} = useTheme()
 
   const theme = DefaultTheme;
-  // theme.colors.background = "#084BB3"
   theme.colors.background = colors.blueGray[100]
 
   return (
