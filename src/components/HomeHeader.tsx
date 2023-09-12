@@ -15,12 +15,12 @@ export function HomeHeader() {
       />
 
       <VStack flex={1}>
-        <Text color="gray.100" fontSize="sm">
+        <Text color="blue.200" fontSize="sm">
           Olá,
         </Text>
 
-        <Heading color="gray.100" fontSize="md">
-          John Doe
+        <Heading color="gray.100" fontSize="md" maxWidth={150} noOfLines={1}>
+          Nome do Funcionário
         </Heading>
 
         

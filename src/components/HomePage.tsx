@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { AppRoutes } from '@routes/app.routes';
-import { Center, HStack, VStack, Pressable, Text } from 'native-base';
+import { Center, HStack, VStack, Pressable, Text, Flex, Box, Heading } from 'native-base';
 import { Icon } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -17,7 +17,16 @@ export function HomePage() {
 
   return (
     <VStack flex={1} justifyItems="center" alignItems="center" >
-      <HStack flexDirection="row" justifyContent="space-around" mt={6} mb={1}>
+      
+      <Flex direction="row" alignItems="center" pt={5}>
+        <Box flex={1} borderBottomWidth={2} borderBottomColor="blue.300" ml={2} />
+        <Heading mx={2} fontFamily="heading" fontSize="2xl" color='blue.400' maxWidth={264} noOfLines={1}>
+          Nome do paciente
+        </Heading> {/** definir um maximo de 20 caracteres */}
+        <Box flex={4} borderBottomWidth={2} borderBottomColor="blue.300" mr={2} />
+      </Flex>
+
+      <HStack flexDirection="row" justifyContent="space-around" mt={3} mb={1}>
         <Pressable
           w={150}
           h={150}
