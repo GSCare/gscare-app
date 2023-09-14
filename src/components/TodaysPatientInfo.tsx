@@ -11,7 +11,7 @@ export function TodaysPatientInfo() {
         {/* <Heading py={2} mb={1} color="blue.400" fontWeight="bold" fontSize="lg" fontFamily="heading">
           Hoje: 01/12
         </Heading> */}
-        <HStack  bg={"gray.50"} p={2} borderRadius={3}>
+        <HStack  bg={"blueGray.100"} p={2} borderRadius={3}>
           <UserPhoto 
             size={32} 
             source={cartoonHomem}
@@ -20,13 +20,13 @@ export function TodaysPatientInfo() {
             borderColor="blue.200"
           />
           <VStack alignItems="start" justifyContent="space-evenly" py={2} maxWidth={150} ml={4}>
-            <Text color="blue.300" fontWeight="bold" fontSize="sm">
+            <Text color="blue.400" fontWeight="bold" fontSize="sm" fontFamily="heading">
               Hoje: 01/02
             </Text>
-            <Text color="orange.300" fontSize="lg" fontWeight="bold" fontFamily="mono" noOfLines={1}>
+            <Text color="orange.400" fontSize="xl" fontWeight="bold" fontFamily="mono" noOfLines={1}>
               Sr. Jose sobrenome fns
             </Text>
-            <Text color="gray.300" fontSize="md" fontFamily="mono" noOfLines={2}>
+            <Text color="blueGray.500" fontSize="md" fontFamily="mono" noOfLines={2}>
               Rua duque joao, bairro aqui, n302. logo na frente do banco dsadasds
             </Text>
           </VStack>

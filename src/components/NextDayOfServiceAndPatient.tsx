@@ -4,11 +4,11 @@ import { MaterialIcons } from '@expo/vector-icons'
 export function NextDayOfServiceAndPatient() {
   return (
     <HStack mt={2} bg="blue.100" borderRadius={4} p={2} justifyContent="space-between">
-    <Text color="blue.500" borderColor="blue.300" px={2} borderRightWidth={2}>
+    <Text color="blue.500" borderColor="blue.400" px={2} borderRightWidth={2}>
       01/01
     </Text>
 
-    <Text color="blue.500">
+    <Text color="blueGray.500">
       sr. jose afonso
     </Text>
     {/* <MaterialIcons name="visibility" /> */}

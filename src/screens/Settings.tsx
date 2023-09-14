@@ -6,6 +6,7 @@ import { HomeHeader } from "@components/HomeHeader";
 import { UserPhoto } from "@components/UserPhoto";
 import { Input } from '@components/Input'
 import { Button } from "@components/Button";
+import { PageHeader } from "@components/PageHeader";
 
 const PHOTO_SIZE = 33;
 
@@ -14,11 +15,7 @@ export function Settings() {
 
   return (
     <VStack flex={1}>
-      <VStack bg="blue.500" pt={16} pb={5} alignItems="center">
-        <Heading color="gray.100" fontSize="lg">
-          Perfil
-        </Heading>
-      </VStack>
+      <PageHeader title='Perfil'/>
       <ScrollView>
         <Center mt={6} px={10}>
           {

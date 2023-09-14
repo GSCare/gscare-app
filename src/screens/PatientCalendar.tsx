@@ -7,32 +7,22 @@ import { useState } from "react";
 
 import { TodaysPatientInfo } from "@components/TodaysPatientInfo";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
+import { PageHeader } from "@components/PageHeader";
+import { DescPageHeader } from "@components/DescPageHeader";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <VStack flex={1}>
+      <PageHeader title='Agenda de trabalho'/>
       
-      <VStack bg="blue.500" pt={16} pb={5} alignItems="center">
-        <Heading color="gray.100" fontSize="lg">
-          Agenda de trabalho
-        </Heading>
-      </VStack>
-      {/* <HomeHeader /> */}
-      <Flex direction="row" alignItems="center" pt={5}>
-        <Box flex={1} borderBottomWidth={2} borderBottomColor="blue.300" ml={2} />
-        <Heading mx={2} fontFamily="heading" fontSize="2xl" color='blue.400' maxWidth={264} noOfLines={1}>
-          Pacientes da semana
-        </Heading> {/** definir um maximo de 20 caracteres */}
-        <Box flex={4} borderBottomWidth={2} borderBottomColor="blue.300" mr={2} />
-      </Flex>
+      <DescPageHeader title="Pacientes da semana"/>
+
       <VStack justifyContent="space-around" flex={1}  px={10}>
         <TodaysPatientInfo />
         <VStack>
-          <Text pl={1} color="orange.300">
-            Próximos 6 dias:
-          </Text>
+          <Text pl={1} color="orange.400"> Próximos 6 dias: </Text>
           <ScrollView showsVerticalScrollIndicator={false} h="40">
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
@@ -49,6 +39,7 @@ export function PatientCalendar() {
             title="Definir Agenda de Atendimento"
             onPress={() => setShowModal(true)}
           />
+          {/* Modal */}
           <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
             <Modal.Content maxWidth="400px">
               <Modal.CloseButton />
