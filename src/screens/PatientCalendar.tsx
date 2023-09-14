@@ -1,12 +1,11 @@
 import { HomeHeader } from "@components/HomeHeader";
 import { UserPhoto } from "@components/UserPhoto";
-import { Center, FormControl, HStack, Icon, Input, Modal, Text, VStack, Button } from "native-base";
+import { Center, FormControl, HStack, Icon, Input, Modal, Text, VStack, Button, Heading, Flex, Box } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons'
 import { Button as ButtonComp } from "@components/Button";
 import { useState } from "react";
 
-import cartoonHomem from '@assets/cartoonHomen.png'
-import cartoonMulher from '@assets/cartoonMulher.png'
+import { TodaysPatientInfo } from "@components/TodaysPatientInfo";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
@@ -14,32 +13,15 @@ export function PatientCalendar() {
   return (
     <VStack flex={1}>
       <HomeHeader />
+      <Flex direction="row" alignItems="center" pt={5}>
+        <Box flex={1} borderBottomWidth={2} borderBottomColor="blue.300" ml={2} />
+        <Heading mx={2} fontFamily="heading" fontSize="2xl" color='blue.400' maxWidth={264} noOfLines={1}>
+          Agenda de trabalho
+        </Heading> {/** definir um maximo de 20 caracteres */}
+        <Box flex={4} borderBottomWidth={2} borderBottomColor="blue.300" mr={2} />
+      </Flex>
       <VStack justifyContent="space-between" flex={1}>
-        <HStack py={4}>
-          <Center flex={1}>
-            <Text py={2} color="blue.400" fontWeight="bold" fontSize="lg">
-              Hoje: 01/12
-            </Text>
-            <UserPhoto 
-              size={33} 
-              source={cartoonHomem}
-              alt="Imagem do usuário ou empresa"
-              borderWidth={1}
-              borderColor="blue.200"
-            />
-            <VStack alignItems="center">
-              <Text color="blue.400" fontSize="md" fontFamily="mono" noOfLines={1} maxWidth={10*20}>
-                Jose sobrenome
-              </Text>
-              <Text color="blue.400" fontSize="md" fontFamily="mono">
-                78
-              </Text>
-              <Text color="blue.400" fontSize="md" fontFamily="mono" noOfLines={3} maxWidth={10*20} textAlign="center">
-                Rua duque joao, bairro aqui, n302. logo na frente do banco dsadasds
-              </Text>
-            </VStack>
-          </Center>
-        </HStack>
+        <TodaysPatientInfo />
 
         <VStack>
           <HStack mt={2} bg="blue.100" mx={10} borderRadius={4} p={2} justifyContent="space-between">
