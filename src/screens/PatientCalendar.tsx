@@ -6,7 +6,7 @@ import { Button as ButtonComp } from "@components/Button";
 import { useState } from "react";
 
 import { TodaysPatientInfo } from "@components/TodaysPatientInfo";
-import { NextDayOfServiceAndPatient } from "@components/nextDayOfServiceAndPatient";
+import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
