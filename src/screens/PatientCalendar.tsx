@@ -18,7 +18,7 @@ export function PatientCalendar() {
         <HStack py={4}>
           <Center flex={1}>
             <Text py={2} color="blue.400" fontWeight="bold" fontSize="lg">
-              Data: 01/12
+              Hoje: 01/12
             </Text>
             <UserPhoto 
               size={33} 
@@ -28,14 +28,14 @@ export function PatientCalendar() {
               borderColor="blue.200"
             />
             <VStack alignItems="center">
-              <Text color="blue.400" fontSize="md" fontFamily="mono">
-                Nome do paciente
+              <Text color="blue.400" fontSize="md" fontFamily="mono" noOfLines={1} maxWidth={10*20}>
+                Jose sobrenome
               </Text>
               <Text color="blue.400" fontSize="md" fontFamily="mono">
-                idade
+                78
               </Text>
-              <Text color="blue.400" fontSize="md" fontFamily="mono">
-                endereco
+              <Text color="blue.400" fontSize="md" fontFamily="mono" noOfLines={3} maxWidth={10*20} textAlign="center">
+                Rua duque joao, bairro aqui, n302. logo na frente do banco dsadasds
               </Text>
             </VStack>
           </Center>
