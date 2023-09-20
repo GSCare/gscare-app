@@ -13,6 +13,7 @@ import { ComplaintsAndNotices } from "@screens/ComplaintsAndNotices";
 import { DailyReport } from "@screens/DailyReport";
 import { EmergencyPhones } from "@screens/EmergencyPhones";
 import { FoodAndMedicineAllergies } from "@screens/FoodAndMedicineAllergies";
+import { ConsultationCalendar } from "@screens/ConsultationCalendar";
 import { PatientsMedicalDocuments } from "@screens/PatientsMedicalDocuments";
 import { Profile } from "@screens/Profile";
 import { Settings } from "@screens/Settings";
@@ -33,6 +34,7 @@ export type AppRoutes = {
   emergencyPhones: undefined;
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
+  consultationCalendar: undefined;
   // ! essas rotas abaixo só seram usadas na segunda versa
   patientsMedicalDocuments: undefined;
   foodAndMedicineAllergies: undefined;
@@ -106,6 +108,11 @@ export function AppRoutes() {
       <Screen 
         name="foodAndMedicineAllergies" 
         component={FoodAndMedicineAllergies} 
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen 
+        name="consultationCalendar" 
+        component={ConsultationCalendar} 
         options={{ tabBarButton: () => null }}
       />
       <Screen 

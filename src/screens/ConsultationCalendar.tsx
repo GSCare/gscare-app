@@ -4,10 +4,10 @@ import { PageHeader } from "@components/PageHeader";
 import { VStack, Fab, Icon, View, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-export function MedicationSchedules() {
+export function ConsultationCalendar() {
   return (
     <VStack flex={1}>
-      <PageHeader title='Horários da medicação'/>
+      <PageHeader title='Calendário de consultas'/>
       
       <DescPageHeader title="Nome pacientes da semana"/>
 

@@ -25,7 +25,7 @@ export function HomePage() {
       <HStack flexDirection="row" justifyContent="space-around" mt={3} mb={1}>
         <HomeButtonOptionTools 
           desc='Relatorio diario' 
-          icon={'calendar-today'} 
+          icon={'perm-contact-calendar'} 
           handleButtonPress={handleButtonPress} 
           parametro={'dailyReport'} 
         />
@@ -39,16 +39,16 @@ export function HomePage() {
 
       <HStack flexDirection="row" justifyContent="space-around" mb={1}>
         <HomeButtonOptionTools 
-          desc='Horários de medicação' 
+          desc='Horários da medicação' 
           icon={'timer'} 
           handleButtonPress={handleButtonPress} 
           parametro={'medicationSchedules'} 
         />
         <HomeButtonOptionTools 
-          desc='Documentos médicos do paciente' 
-          icon={'folder-shared'} 
+          desc='Calendário de consultas' 
+          icon={'calendar-today'} 
           handleButtonPress={handleButtonPress} 
-          parametro={'patientsMedicalDocuments'} 
+          parametro={'consultationCalendar'} 
         />
       </HStack>
 
