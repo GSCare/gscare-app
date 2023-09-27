@@ -8,18 +8,18 @@ interface Props {
   typeList?: string
 }
 
-export function NextDayOfServiceAndPatient({date,title,color,typeList}: Props) {
+export function ListItem({date,title,color,typeList}: Props) {
 
   return (
-    <HStack mt={2} bg="blue.100" borderRadius={4} p={2} justifyContent="space-between">
-      <Text color="blue.500" borderColor="blue.400" px={2} borderRightWidth={2}>
-        01/01
+    <HStack mt={2} bg="blueGray.200" borderRadius={4} p={4} justifyContent="space-between">
+      <Text color="blue.500" borderColor="blue.500" pr={4} borderRightWidth={2}>
+        14:20
       </Text>
 
-      <Text color="blueGray.500">
-        sr. jose afonso
+      <Text color="blue.500" maxWidth="70%" noOfLines={1}>
+        Dorflex-300ml
       </Text>
-      {/* <MaterialIcons name="visibility" /> */}
+
       <Center>
         <Icon 
           as={MaterialIcons}

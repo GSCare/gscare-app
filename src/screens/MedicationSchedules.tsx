@@ -1,8 +1,10 @@
 import { DescPageHeader } from "@components/DescPageHeader";
 import { MaterialIcons } from '@expo/vector-icons';
 import { PageHeader } from "@components/PageHeader";
-import { VStack, Fab, Icon, View, Text } from "native-base";
+import { VStack, Fab, Icon, View, Text, ScrollView, HStack, Center } from "native-base";
 import { TouchableOpacity } from "react-native";
+import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
+import { ListItem } from "@components/ListItem";
 
 export function MedicationSchedules() {
   return (
@@ -11,8 +13,15 @@ export function MedicationSchedules() {
       
       <DescPageHeader title="Nome pacientes da semana"/>
 
-      <VStack justifyContent="space-around" flex={1}  px={10}>
-        
+      <VStack justifyContent="start" flex={1} px={10}>
+        <VStack py={6}>
+          <Text pl={1} fontSize='md' color="orange.400"> Lista de medicamentos: </Text>
+          <ScrollView showsVerticalScrollIndicator={false} h="100%">
+            <ListItem />
+            <ListItem />
+            <ListItem />
+          </ScrollView>
+        </VStack>
       </VStack>
       
       <View position={'absolute'} bottom={4} right={4}>
