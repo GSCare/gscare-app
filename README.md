@@ -1,3 +1,12 @@
+## Screenshots
+
+### Login
+![Tela de login](./@Screenshots/SignIn.jpg)
+
+### Register
+![Tela de criação de conta](./@Screenshots/SignUp.jpg)
+
+
 ## WARN WARN: In React 18, SSRProvider is not necessary and is a noop.
 
 ### Solução:

@@ -1,6 +1,8 @@
-import { VStack, Text, Center, Heading, ScrollView } from 'native-base'
+import { VStack, Text, Center, Heading, ScrollView, Image } from 'native-base'
 
 import LogoSvg from '@assets/logo.svg'
+import BackgroundImg from '@assets/backgroundLogin/background.png'
+
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 import { useNavigation } from '@react-navigation/native'
@@ -14,7 +16,18 @@ export function SignUp() {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
-      <VStack flex={1} px={10} pb={16}>
+      <VStack flex={1} px={10}>
+        
+        <Image
+          source={BackgroundImg}
+          defaultSource={BackgroundImg}
+          alt="Pessoas treinando"
+          resizeMode="cover"
+          h={'100%'}
+          position="absolute"
+          blurRadius={12}
+        />
+
         <Center my={24}>
           <LogoSvg width={200} height={50}/>
 
