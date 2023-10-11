@@ -21,23 +21,23 @@ export function SignUp() {
         <Image
           source={BackgroundImg}
           defaultSource={BackgroundImg}
-          alt="Pessoas treinando"
+          alt="Pessoas treinando" 
           resizeMode="cover"
           h={'100%'}
           position="absolute"
           blurRadius={12}
         />
 
-        <Center my={24}>
+        <Center my={16}>
           <LogoSvg width={200} height={50}/>
 
-          <Text color="gray.100" fontSize="sm">
+          <Text color="white" fontSize="md" fontWeight="medium">
             Cuide com segurança
           </Text>
         </Center>
 
         <Center>
-          <Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
+          <Heading color="white" fontSize="xl" mb={6} fontFamily="heading">
             Crie sua conta
           </Heading>
 
@@ -46,13 +46,18 @@ export function SignUp() {
           />
 
           <Input 
-            placeholder="E-mal" 
+            placeholder="E-mail" 
             keyboardType="email-address"
             autoCapitalize="none"
           />
 
           <Input 
             placeholder="Senha"
+            secureTextEntry
+          />
+
+          <Input 
+            placeholder="Confirmar senha"
             secureTextEntry
           />
 
