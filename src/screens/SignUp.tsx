@@ -28,12 +28,12 @@ export function SignUp() {
           blurRadius={12}
         />
 
-        <Center my={16}>
+        <Center my={20}>
           <LogoSvg width={200} height={50}/>
 
-          <Text color="white" fontSize="md" fontWeight="medium">
+          {/* <Text color="white" fontSize="md" fontWeight="medium">
             Cuide com segurança
-          </Text>
+          </Text> */}
         </Center>
 
         <Center>

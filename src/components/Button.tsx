@@ -7,6 +7,12 @@ type Props = IButtonProps & {
 };
 
 export function Button({title, variant = "solid", ...rest}: Props) {
+  const textWithShadowStyle = {
+    textShadowColor: 'rgba(0, 0, 0, 0.2)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
+  }
+
   return (
     <ButtonNativeBase 
       w="full"
@@ -24,6 +30,7 @@ export function Button({title, variant = "solid", ...rest}: Props) {
         color={ variant === "outline" ? "Orange" : "white"}
         fontFamily="heading"
         fontSize="sm"
+        style={variant === "outline" && textWithShadowStyle}
       >
         {title}
       </Text>

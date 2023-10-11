@@ -2,11 +2,11 @@
 
 ### Login
 <!-- ![Tela de login](./@Screenshots/SignIn2.jpg) -->
-<img src="./@Screenshots/SignIn2.jpg" alt="Tela de criação de conta" width="30%">
+<img src="./@Screenshots/SignIn.jpg" alt="Tela de criação de conta" width="30%">
 
 ### Register
 <!-- ![Tela de criação de conta](./@Screenshots/SignUp2.jpg) -->
-<img src="./@Screenshots/SignUp2.jpg" alt="Tela de criação de conta" width="30%">
+<img src="./@Screenshots/SignUp.jpg" alt="Tela de criação de conta" width="30%">
 
 ---
 ## WARN WARN: In React 18, SSRProvider is not necessary and is a noop.
