@@ -39,12 +39,13 @@ export function SignIn() {
         </Center>
         <Center mt={6}>
 
-          <View className='bg-dark w-full'></View>
-          <Text>Funcionaaaaaaaaaaaaaaaaaaaa</Text>
+          <View className='bg-black w-full'>
+           <Text className='text-white text-bold text-xl'>Funcionaaaaaaaaaaaaaaaaaaaa</Text>
+          </View>
+
           <Heading color="white" fontSize="xl" mb={6} fontFamily="heading">
             Acesse sua conta
           </Heading>
-
           <Input 
             placeholder="E-mail" 
             keyboardType="email-address"
