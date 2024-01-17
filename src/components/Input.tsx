@@ -1,23 +1,30 @@
-import { Input as NativeBaseInput, IInputProps } from 'native-base'
+import { TextInput, TextInputProps } from "react-native";
 
-export function Input({...rest}: IInputProps) {
+interface InputProps extends TextInputProps {
+  value: string;
+  placeholder: string;
+}
+
+export function Input({ value, placeholder,...props }:InputProps) {
+
   return (
-    <NativeBaseInput 
-      bg="gray.50"
-      h={14}
-      px={4}
-      borderWidth={0}
-      fontSize="md"
-      color="gray.400"
-      fontFamily="body"
-      mb={4}
-      placeholderTextColor="gray.300"
-      _focus={{
-        bg: "white",
-        borderWidth: 1,
-        borderColor: "Orange",
-      }}
-      {...rest}
+    <TextInput 
+      className="
+        bg-gray-200
+        w-80
+        h-14 
+        p-4
+        b-0
+        rounded-md
+        text-lg 
+        text-gray-400 
+        mb-4 
+        focus:bg-white 
+        focus:b-1 
+        focus:border-orange-500"
+      value={value}
+      placeholder={placeholder}
+      {...props}
     />
   )
 }

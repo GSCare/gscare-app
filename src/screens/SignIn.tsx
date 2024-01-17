@@ -46,15 +46,13 @@ export function SignIn() {
           <Heading color="white" fontSize="xl" mb={6} fontFamily="heading">
             Acesse sua conta
           </Heading>
-          <Input 
-            placeholder="E-mail" 
-            keyboardType="email-address"
-            autoCapitalize="none"
+          <Input
+            placeholder='Email'
+            value=''
           />
 
-          <Input 
-            placeholder="Senha"
-            secureTextEntry
+          <Input
+          placeholder='Senha'
           />
 
           <Button title="Acessar" />
