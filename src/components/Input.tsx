@@ -11,8 +11,8 @@ export function Input({ value, placeholder,...props }:InputProps) {
     <TextInput 
       className="
         bg-gray-200
-        w-80
-        h-14 
+        w-full
+        h-14
         p-4
         b-0
         rounded-md

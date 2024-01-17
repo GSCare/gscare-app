@@ -1,5 +1,4 @@
 import { useNavigation } from '@react-navigation/native'
-import { VStack, Text, Center, Heading, ScrollView, Image } from 'native-base'
 
 import { AuthNavigatorRoutesProps } from '@routes/auth.routes'
 
@@ -7,7 +6,7 @@ import LogoSvg from '@assets/logo.svg'
 import BackgroundImg from '@assets/backgroundLogin/background.png'
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
-import { View } from 'react-native'
+import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
 export function SignIn() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>()
@@ -18,58 +17,46 @@ export function SignIn() {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
-      <VStack flex={1} px={10} alignContent="space-around">
+      <View className='flex-1 px-0 content-around flex-col h-screen'>
 
-        <Image
+        <ImageBackground
           source={BackgroundImg}
           defaultSource={BackgroundImg}
           alt="Pessoas treinando"
-          resizeMode="cover"
-          h={'100%'}
-          position="absolute"
           blurRadius={12}
+          className='h-full w-full absolute bg-cover justify-center'
         />
 
-        <Center my={24}>
-          <LogoSvg width={200} height={50}/>
-
-          {/* <Text color="orange.300" fontSize="md" fontWeight="medium">
-            Cuide com segurança
-          </Text> */}
-        </Center>
-        <Center mt={6}>
-
-          <View className='bg-black w-full'>
-           <Text className='text-white text-bold text-xl'>Funcionaaaaaaaaaaaaaaaaaaaa</Text>
-          </View>
-
-          <Heading color="white" fontSize="xl" mb={6} fontFamily="heading">
+        <View className='mt-24 mb-24 mx-auto'>
+          <LogoSvg width={200} height={50} />
+        </View>
+        <View className='mt-6 px-9'>
+          <Text className='text-white text-2xl mb-6 font-bold mx-auto'>
             Acesse sua conta
-          </Heading>
+          </Text>
           <Input
             placeholder='Email'
             value=''
           />
-
           <Input
-          placeholder='Senha'
+            placeholder='Senha'
+            value=''
           />
 
           <Button title="Acessar" />
-        </Center>
+        </View>
 
-        <Center mt={32}>
-          {/* <Text color="white" mb={3} fontFamily="body"  fontSize="md" fontWeight="medium">
-            Ainda não tem acesso?
-          </Text> */}
-
-          <Button 
-            title="Crie sua conta!" 
-            variant="outline" 
-            onPress={handleNewAccount}
+        <View className='mt-32 px-9'>
+          <Button
+            title="Crie sua conta!"
+            variant="outline"
           />
-        </Center>
-      </VStack>
+          <TouchableOpacity 
+            onPress={handleNewAccount}>
+              <Text>Teste</Text>
+            </TouchableOpacity>
+        </View>
+      </View>
     </ScrollView>
   )
 }
