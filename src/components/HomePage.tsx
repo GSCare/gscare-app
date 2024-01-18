@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { AppRoutes } from '@routes/app.routes';
-import { Center, HStack, VStack, Pressable, Text, Flex, Box, Heading } from 'native-base';
 import { Icon } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 import { DescPageHeader } from './DescPageHeader';
 import { HomeButtonOptionTools } from './HomeButtonOptionTools';
+import { View } from 'react-native';
 
 
 type NavigationType = NavigationProp<AppRoutes>;
@@ -18,11 +18,9 @@ export function HomePage() {
   };
 
   return (
-    <VStack flex={1} justifyItems="center" alignItems="center" >
-      
+    <View className='flex-1 justify-center text-center m-auto'>
       <DescPageHeader title="Nome do paciente"/>
-
-      <HStack flexDirection="row" justifyContent="space-around" mt={3} mb={1}>
+      <View className='justify-around mb-1 mt-1 flex-row'>
         <HomeButtonOptionTools 
           desc='Relatorio diario' 
           icon={'perm-contact-calendar'} 
@@ -35,9 +33,9 @@ export function HomePage() {
           handleButtonPress={handleButtonPress} 
           parametro={'clientsPathologies'} 
         />
-      </HStack>
+      </View>
 
-      <HStack flexDirection="row" justifyContent="space-around" mb={1}>
+      <View className='justify-around mb-1 mt-1 flex-row'>
         <HomeButtonOptionTools 
           desc='Horários da medicação' 
           icon={'timer'} 
@@ -50,9 +48,9 @@ export function HomePage() {
           handleButtonPress={handleButtonPress} 
           parametro={'consultationCalendar'} 
         />
-      </HStack>
+      </View>
 
-      <HStack flexDirection="row" justifyContent="space-around" mb={1}>
+      <View className='justify-around mb-1 mt-1 flex-row'>
         <HomeButtonOptionTools 
           desc='Alergias alimentares e medicinais' 
           icon={'inventory'} 
@@ -65,7 +63,7 @@ export function HomePage() {
           handleButtonPress={handleButtonPress} 
           parametro={'emergencyPhones'} 
         />
-      </HStack>
-    </VStack>
+      </View>
+    </View>
   );
 }
