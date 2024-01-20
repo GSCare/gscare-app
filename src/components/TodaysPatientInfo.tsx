@@ -1,37 +1,34 @@
-import { Center, HStack, Heading, Text, VStack } from "native-base";
 import { UserPhoto } from "./UserPhoto";
 
 import cartoonHomem from '@assets/cartoonHomen.png'
 import cartoonMulher from '@assets/cartoonMulher.png'
+import { Text, View } from "react-native";
 
 export function TodaysPatientInfo() {
   return (
-    <HStack py={4}>
-      <Center flex={1} >
+    <View className="py-4 flex-row">
+      <View className="flex-1 justify-center items-center">
         {/* <Heading py={2} mb={1} color="blue.400" fontWeight="bold" fontSize="lg" fontFamily="heading">
           Hoje: 01/12
         </Heading> */}
-        <HStack  bg={"blueGray.100"} p={2} borderRadius={3}>
+        <View className="bg-blue-100 p-2 rounded-lg flex-row">
           <UserPhoto 
-            size={32} 
-            source={cartoonHomem}
-            alt="Imagem do usuário ou empresa"
-            borderWidth={1}
-            borderColor="blue.200"
+            sourceUrl={'https://github.com/luisfelipeprs.png'}
+            altDescription="Imagem do usuário ou empresa"
           />
-          <VStack alignItems="start" justifyContent="space-evenly" py={2} maxWidth={150} ml={4}>
-            <Text color="blue.400" fontWeight="bold" fontSize="sm" fontFamily="heading">
+          <View className="items-start justify-evenly py-2 ml-4 max-w-lg">
+            <Text className="text-blue-400 font-bold text-sm">
               Hoje: 01/02
             </Text>
-            <Text color="orange.400" fontSize="xl" fontWeight="bold" fontFamily="mono" noOfLines={1}>
+            <Text className="text-orange-400 font-bold text-xl">
               Sr. Jose sobrenome fns
             </Text>
-            <Text color="blueGray.500" fontSize="md" fontFamily="mono" noOfLines={2}>
+            <Text className="text-blue-400 text-md">
               Rua duque joao, bairro aqui, n302. logo na frente do banco dsadasds
             </Text>
-          </VStack>
-        </HStack>
-      </Center>
-    </HStack>
+          </View>
+        </View>
+      </View>
+    </View>
   )
 }

@@ -1,6 +1,6 @@
-import { Icon, Pressable, Text } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons';
 import { AppRoutes } from "@routes/app.routes";
+import { Pressable, Text } from "react-native";
 
 type AppRouteKey = keyof AppRoutes;
 
@@ -17,19 +17,12 @@ export function HomeButtonOptionTools({desc, icon, handleButtonPress, parametro}
   };
 
   return (
-    <Pressable
-      w={150}
-      h={150}
-      borderRadius={5}
-      m={2}
-      p={7}
-      justifyContent="space-between"
-      backgroundColor={'white'}
-      alignItems="center"
+    <Pressable 
+      className="w-150 h-150 max-w-max rounded-md box-border m-2 p-7 justify-between bg-blue-500 items-center"
       onPress={handleClick}
     >
-      <Icon as={MaterialIcons} name={icon} size={8} m={2} color={'blue.400'}/>
-      <Text textAlign='center' noOfLines={2}>{desc}</Text>
+      <MaterialIcons className='' name="perm-contact-calendar" size={60} m={2} color='blue'/>
+      {/* <Text className="text-center overflow-hidden">{desc}</Text> */}
     </Pressable>
   )
 }

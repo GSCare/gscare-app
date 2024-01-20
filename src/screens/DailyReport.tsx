@@ -1,8 +1,7 @@
 import { DescPageHeader } from "@components/DescPageHeader";
 import { MaterialIcons } from '@expo/vector-icons';
 import { PageHeader } from "@components/PageHeader";
-import { VStack, Fab, Icon, View, Text, Center, Heading, HStack, ScrollView } from "native-base";
-import { TouchableOpacity } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
 
@@ -10,29 +9,29 @@ export function DailyReport() {
   const [reportSent, setReportSent] = useState(false);
 
   return (
-    <VStack flex={1}>
+    <View className='flex-1 flex-col'>
       <PageHeader title='relatório diário'/>
-      
       <DescPageHeader title="Relatório diário"/>
 
-      <VStack justifyContent="space-between"  px={10}>
-        <VStack bg={"blueGray.100"} p={12} borderRadius={3} alignItems={'center'}>
-          <Center>
+      <View className="justify-between px-10">
+        <View className="bg=blue-100 p-12 rounded-lg items-center">
+          <View className="justify-center items-center">
             {
               reportSent
               ?
-              <Icon as={MaterialIcons} name={'event-available'} size={20} m={2} color={'green.400'}/>
+              <MaterialIcons className='' name="event-available" size={70} color='green'/>
               :
-              <Icon as={MaterialIcons} name={'event-busy'} size={20} m={2} color={'red.400'}/>
+              <MaterialIcons className='mt-10' name="event-busy" size={70} color='red'/>
             }
-            <Text color={reportSent ? "green.400" : "red.400"} px={2}>Relatório diário</Text>
-            <Text color={reportSent ? "green.400" : "red.400"} px={2}>{reportSent ? " enviado" : " pendente"}</Text>
-          </Center>
-        </VStack>
+            {/* <Text color={reportSent ? "green.400" : "red.400"} px={2}>Relatório diário</Text> */}
+            <Text className="text-red-400 px-2">Relatório diário</Text>
+            <Text className="text-red-400 px-2">{reportSent ? " enviado" : " pendente"}</Text>
+          </View>
+        </View>
           
-        <VStack>
-          <Text pl={1} color="orange.400"> últimos 3 dias: </Text>
-          <ScrollView showsVerticalScrollIndicator={false} h="56">
+        <View>
+          <Text className="text-orange-400 pl-1"> últimos 3 dias: </Text>
+          <ScrollView className="h-56" showsVerticalScrollIndicator={false}>
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
@@ -41,18 +40,18 @@ export function DailyReport() {
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient /> */}
           </ScrollView>
-        </VStack>
-      </VStack>
+        </View>
+      </View>
       
-      <View position={'absolute'} bottom={4} right={4}>
+      <View className="absolute bottom-4 right-4">
         <TouchableOpacity onPress={() => {
           // TODO: abrir o formulário
         }}>
-          <View backgroundColor='orange.300' borderRadius={"full"} p={2}>
-            <Icon as={MaterialIcons} name='add' size={8} m={2} color={'white'}/>
+          <View className="bg-orange-300 rounded-full p-2">
+            <MaterialIcons name="add" size={25} m={2} color='white'/>
           </View>
         </TouchableOpacity>
       </View>
-    </VStack>
+    </View>
   )
 }

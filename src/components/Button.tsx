@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text as RNText, TouchableOpacity, Text } from 'react-native';
-import { color } from 'native-base/lib/typescript/theme/styled-system';
+
 
 type Props = {
   title: string;

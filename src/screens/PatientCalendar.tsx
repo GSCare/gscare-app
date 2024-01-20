@@ -1,7 +1,4 @@
-import { HomeHeader } from "@components/HomeHeader";
-import { UserPhoto } from "@components/UserPhoto";
-import { Center, FormControl, HStack, Icon, Input, Modal, Text, VStack, Button, Heading, Flex, Box, ScrollView } from "native-base";
-import { MaterialIcons } from '@expo/vector-icons'
+import { FormControl, Input, Modal, Button } from "native-base";
 import { Button as ButtonComp } from "@components/Button";
 import { useState } from "react";
 
@@ -9,21 +6,22 @@ import { TodaysPatientInfo } from "@components/TodaysPatientInfo";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
 import { PageHeader } from "@components/PageHeader";
 import { DescPageHeader } from "@components/DescPageHeader";
+import { ScrollView, Text, View } from "react-native";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <VStack flex={1}>
+    <View className="flex-col flex-1">
       <PageHeader title='Agenda de trabalho'/>
       
       <DescPageHeader title="Pacientes da semana"/>
 
-      <VStack justifyContent="space-around" flex={1}  px={10}>
+      <View className="flex-col justify-around px-10">
         <TodaysPatientInfo />
-        <VStack>
-          <Text pl={1} color="orange.400"> Próximos 6 dias: </Text>
-          <ScrollView showsVerticalScrollIndicator={false} h="40">
+        <View className="flex-col">
+          <Text className="pl-1 text-orange-400"> Próximos 6 dias: </Text>
+          <ScrollView className="h-56" showsVerticalScrollIndicator={false}>
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
@@ -31,10 +29,10 @@ export function PatientCalendar() {
             <NextDayOfServiceAndPatient />
             <NextDayOfServiceAndPatient />
           </ScrollView>
-        </VStack>
+        </View>
 
         
-        <VStack mt={12} mb={9}> 
+        <View className="flex-col mt-12 mb-9"> 
           <ButtonComp 
             title="Definir Agenda de Atendimento"
             onPress={() => setShowModal(true)}
@@ -70,9 +68,9 @@ export function PatientCalendar() {
               </Modal.Footer>
             </Modal.Content>
           </Modal>
-        </VStack>
-      </VStack>
+        </View>
+      </View>
       
-    </VStack>
+    </View>
   )
 }

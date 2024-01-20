@@ -1,17 +1,16 @@
-import { IImageProps, Image } from "native-base";
+import { Image } from "react-native";
 
-type Props = IImageProps & {
-  size: number;
+type Props = {
+  sourceUrl: string;
+  altDescription: string;
 }
 
-export function UserPhoto({size, ...rest}: Props) {
+export function UserPhoto({sourceUrl,altDescription, ...rest}: Props) {
   return (
-    <Image 
-      w={size}
-      h={size}
-      rounded="full"
-      borderWidth={2}
-      borderColor="gray.400"
+    <Image
+      source={{uri:sourceUrl}}
+      alt={altDescription}
+      className="w-16 rounded-full border-2 border-gray-400 mr-3"
       {...rest}
     />
   )

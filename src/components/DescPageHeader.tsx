@@ -1,17 +1,17 @@
-import { Box, Flex, Heading } from "native-base";
+import { Text, View } from "react-native";
 
 interface Props {
-  title: String
+  title: string
 }
 
 export function DescPageHeader({title}: Props) {
   return (
-    <Flex direction="row" alignItems="center" pt={5}>
-      <Box flex={1} borderBottomWidth={2} borderBottomColor="blue.300" ml={2} />
-      <Heading mx={2} fontFamily="heading" fontSize="2xl" color='blue.400' maxWidth={264} noOfLines={1}>
+    <View className='flex-row justify-center pt-5 items-center'>
+      <View className='flex-1 border-b-2 border-b-blue-300 ml-2'></View>
+        <Text className='mx-2 text-xl text-blue-400 max-w-264'>
         {title}
-      </Heading> {/** definir um maximo de 20 caracteres */}
-      <Box flex={4} borderBottomWidth={2} borderBottomColor="blue.300" mr={2} />
-    </Flex>
+        </Text>
+      <View className='flex-1 border-b-2 border-b-blue-300 ml-2'></View>
+    </View>
   )
 }

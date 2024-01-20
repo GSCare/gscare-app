@@ -1,4 +1,4 @@
-import { Heading, VStack } from "native-base";
+import { Text, View } from "react-native";
 
 interface Props {
   title: String
@@ -6,10 +6,10 @@ interface Props {
 
 export function PageHeader({title}: Props) {
   return (
-    <VStack bg="blue.500" pt={16} pb={5} alignItems="center">
-      <Heading color="gray.100" fontSize="lg">
+    <View className="bg-blue-500 pt-16 pb-5 items-center flex-row justify-center">
+      <Text className="text-gray-100 text-lg">
         {title}
-      </Heading>
-    </VStack>
+      </Text>
+    </View>
   )
 }

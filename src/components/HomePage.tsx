@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { AppRoutes } from '@routes/app.routes';
-import { Icon } from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 import { DescPageHeader } from './DescPageHeader';
 import { HomeButtonOptionTools } from './HomeButtonOptionTools';
