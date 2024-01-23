@@ -36,39 +36,45 @@ export function SignUp() {
           <Text className='text-white text-2xl mb-6 font-bold mx-auto'>
             Crie sua conta
           </Text>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=''
+              placeholder="Nome"
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
 
-          <Input
-          value=''
-            placeholder="Nome"
-          />
+            <Input
+              value=''
+              placeholder="E-mail"
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=''
+              placeholder="Senha"
+              secureTextEntry
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
 
-          <Input
-          value=''
-            placeholder="E-mail"
-            keyboardType="email-address"
-            autoCapitalize="none"
-          />
-
-          <Input
-          value=''
-            placeholder="Senha"
-            secureTextEntry
-          />
-
-          <Input
-          value=''
-            placeholder="Confirmar senha"
-            secureTextEntry
-          />
+            <Input
+              value=''
+              placeholder="Confirmar senha"
+              secureTextEntry
+            />
+          </View>
 
           <Button title="Criar e acessar" />
         </View>
 
         <View className='mt-20 px-9'>
-        <Button
-          title="Voltar para o login"
-          variant="outline"
-        />
+          <Button
+            title="Voltar para o login"
+            variant="outline"
+          />
         </View>
       </View>
     </ScrollView>

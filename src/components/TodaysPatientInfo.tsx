@@ -12,15 +12,17 @@ export function TodaysPatientInfo() {
           Hoje: 01/12
         </Heading> */}
         <View className="bg-blue-100 p-2 rounded-lg flex-row">
-          <UserPhoto 
-            sourceUrl={'https://github.com/luisfelipeprs.png'}
-            altDescription="Imagem do usuário ou empresa"
-          />
-          <View className="items-start justify-evenly py-2 ml-4 max-w-lg">
+          <View className='w-20 h-20 my-auto mr-2'>
+            <UserPhoto
+              sourceUrl={'https://github.com/luisfelipeprs.png'}
+              altDescription="Imagem do usuário ou empresa"
+            />
+          </View>
+          <View className="justify-evenly py-2 ml-4 max-w-lg">
             <Text className="text-blue-400 font-bold text-sm">
               Hoje: 01/02
             </Text>
-            <Text className="text-orange-400 font-bold text-xl">
+            <Text className="text-orange-400 font-bold text-lg">
               Sr. Jose sobrenome fns
             </Text>
             <Text className="text-blue-400 text-md">

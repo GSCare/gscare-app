@@ -25,7 +25,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
   home: undefined;
-  patientCalendar: undefined; 
+  patientCalendar: undefined;
   settings: undefined;
   // ? rotas que ficaram nas divs da home
   attendanceCalendar: undefined;
@@ -52,8 +52,8 @@ export function AppRoutes() {
   const iconSize = sizes[7]
 
   return (
-    <Navigator screenOptions={{ 
-      headerShown: false, 
+    <Navigator screenOptions={{
+      headerShown: false,
       tabBarShowLabel: false,
       tabBarActiveTintColor: colors.white,
       tabBarInactiveTintColor: colors.blue[300],
@@ -65,89 +65,89 @@ export function AppRoutes() {
         paddingTop: sizes[6]
       }
     }}>
-      <Screen 
-        name="home" 
-        component={Home} 
+      <Screen
+        name="home"
+        component={Home}
         options={{
           tabBarIcon: ({ color }) => (
             // <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="home" size={6} m={2} color={color}/>
+            <Icon as={MaterialIcons} name="home" size={6} m={2} color={color} />
           )
         }}
       />
-      <Screen 
-        name="patientCalendar" 
-        component={PatientCalendar} 
+      <Screen
+        name="patientCalendar"
+        component={PatientCalendar}
         options={{
           tabBarIcon: ({ color }) => (
             // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color={color}/>
+            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color={color} />
           )
         }}
       />
-      <Screen 
-        name="settings" 
-        component={Settings} 
+      <Screen
+        name="settings"
+        component={Settings}
         options={{
           tabBarIcon: ({ color }) => (
             // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="menu" size={6} m={2} color={color}/>
+            <Icon as={MaterialIcons} name="menu" size={6} m={2} color={color} />
           )
         }}
       />
-      <Screen 
-        name="medicationSchedules" 
-        component={MedicationSchedules} 
+      <Screen
+        name="medicationSchedules"
+        component={MedicationSchedules}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="dailyReport" 
-        component={DailyReport} 
+      <Screen
+        name="dailyReport"
+        component={DailyReport}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="foodAndMedicineAllergies" 
-        component={FoodAndMedicineAllergies} 
+      <Screen
+        name="foodAndMedicineAllergies"
+        component={FoodAndMedicineAllergies}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="consultationCalendar" 
-        component={ConsultationCalendar} 
+      <Screen
+        name="consultationCalendar"
+        component={ConsultationCalendar}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="attendanceCalendar" 
-        component={AttendanceCalendar} 
+      <Screen
+        name="attendanceCalendar"
+        component={AttendanceCalendar}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="clientsPathologies" 
-        component={ClientsPathologies} 
+      <Screen
+        name="clientsPathologies"
+        component={ClientsPathologies}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="complaintsAndNotices" 
-        component={ComplaintsAndNotices} 
+      <Screen
+        name="complaintsAndNotices"
+        component={ComplaintsAndNotices}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="emergencyPhones" 
-        component={EmergencyPhones} 
+      <Screen
+        name="emergencyPhones"
+        component={EmergencyPhones}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="patientsMedicalDocuments" 
-        component={PatientsMedicalDocuments} 
+      <Screen
+        name="patientsMedicalDocuments"
+        component={PatientsMedicalDocuments}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="profile" 
-        component={Profile} 
+      <Screen
+        name="profile"
+        component={Profile}
         options={{ tabBarButton: () => null }}
       />
-      <Screen 
-        name="supplyMonitoring" 
-        component={SupplyMonitoring} 
+      <Screen
+        name="supplyMonitoring"
+        component={SupplyMonitoring}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>

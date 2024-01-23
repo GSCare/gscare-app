@@ -1,12 +1,12 @@
 import { HomeHeader } from "@components/HomeHeader";
 import { HomePage } from "@components/HomePage";
-import { Center, Text, VStack } from "native-base";
+import { View } from "react-native";
 
 export function Home() {
   return (
-    <VStack flex={1}>
+    <View className="flex-1 flex-col">
       <HomeHeader />
       <HomePage />
-    </VStack>
+    </View>
   )
 }

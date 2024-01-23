@@ -9,7 +9,7 @@ interface Props {
   typeList?: string
 }
 
-export function ListItem({date,title,color,typeList}: Props) {
+export function ListItem({ date, title, color, typeList }: Props) {
 
   return (
     <View className="mt-2 bg-blue-200 rounded-sm p-4 justify-between flex-row">
@@ -22,7 +22,7 @@ export function ListItem({date,title,color,typeList}: Props) {
       </Text>
 
       <View>
-      <MaterialIcons className='' name="visibility" size={25} m={2} color='blue'/>
+        <MaterialIcons className='' name="visibility" size={25} m={2} color='blue' />
       </View>
     </View>
   )

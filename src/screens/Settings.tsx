@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { TouchableOpacity } from "react-native";
-import { Center, ScrollView, Text, VStack, Skeleton, Heading, Box, HStack } from "native-base";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 import { HomeHeader } from "@components/HomeHeader";
 import { UserPhoto } from "@components/UserPhoto";
@@ -14,75 +13,69 @@ export function Settings() {
   const [photoIsLoading, setPhotoIsLoading] = useState(false);
 
   return (
-    <VStack flex={1}>
-      <PageHeader title='Perfil'/>
+    <View className="flex-1 flex-col">
+      <PageHeader title='Perfil' />
       <ScrollView>
-        <Center mt={6} px={10}>
-          {
-            photoIsLoading
-            ?
-            <Skeleton 
-              w={PHOTO_SIZE}
-              h={PHOTO_SIZE}
-              rounded="full"
-              startColor="gray.100"
-              endColor="blue.100"
-            />
-            :
+
+        <View className="mt-6 px-10 justify-center items-center">
+
+          <View className="h-20 w-20">
             <UserPhoto
-              size={PHOTO_SIZE} 
-              source={{ uri: 'https://github.com/feh-franc0.png' }}
-              alt="Imagem do usuário ou empresa"
+              sourceUrl={'https://github.com/luisfelipeprs.png'}
+              altDescription="Imagem do usuário ou empresa"
             />
-          }
-        
+          </View>
           <TouchableOpacity>
-            <Text color='orange.400' fontWeight="bold" fontSize="md" mt={2} mb={8}>
+            <Text className="text-orange-400 font-bold text-lg mt-2 mb-8">
               Alterar foto
             </Text>
           </TouchableOpacity>
-
-          <Input 
-            bg="blue.100"
-            placeholder="Nome"
-          />
-
-          <Input 
-            bg="blue.100"
-            placeholder="conta@email.com"
-            isDisabled
-          />
-        </Center>
-
-        <VStack px={10} mt={12} mb={9}>
-          <Heading color="orange.300" fontSize="md" mb={2}>
+        </View>
+        <View className="px-10 mb-9 flex-col">
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=""
+              placeholder="Nome"
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=""
+              placeholder="conta@email.com"
+            // isDisabled
+            />
+          </View>
+        </View>
+        <View className="px-10 mb-9 flex-col">
+          <Text className='text-orange-300 text-lg mb-2'>
             Alterar senha
-          </Heading>
-        
-          <Input
-            bg="blue.100"
-            placeholder="Senha antiga"
-            secureTextEntry
-          />
-        
-          <Input
-            bg="blue.100"
-            placeholder="Nova senha"
-            secureTextEntry
-          />
-        
-          <Input
-            bg="blue.100"
-            placeholder="Confirme a nova senha"
-            secureTextEntry
-          />
-
-          <Button 
+          </Text>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=""
+              placeholder="Senha antiga"
+              secureTextEntry
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=""
+              placeholder="Nova senha"
+              secureTextEntry
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
+            <Input
+              value=""
+              placeholder="Confirme a nova senha"
+              secureTextEntry
+            />
+          </View>
+          <Button
             title="Atualizar"
-            mt={4}
           />
-        </VStack>
+        </View>
       </ScrollView>
-    </VStack>
+    </View>
   )
 }

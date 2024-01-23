@@ -1,9 +1,9 @@
-import { Center, Text } from "native-base";
+import { Text, View } from "react-native";
 
 export function AttendanceCalendar() {
   return (
-    <Center flex={1}>
+    <View className="flex-1 items-center justify-center">
       <Text>calendario de atendimentos</Text>
-    </Center>
+    </View>
   )
 }

@@ -1,9 +1,10 @@
-import { Center, Text } from "native-base";
+import { Text, View } from "react-native";
+
 
 export function PatientsMedicalDocuments() {
   return (
-    <Center flex={1}>
+    <View className="flex-1 items-center justify-center">
       <Text>documentos médicos do paciente</Text>
-    </Center>
+    </View>
   )
 }

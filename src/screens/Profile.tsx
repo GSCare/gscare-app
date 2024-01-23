@@ -1,9 +1,9 @@
-import { Center, Text } from "native-base";
+import { Text, View } from "react-native";
 
 export function Profile() {
   return (
-    <Center flex={1}>
+    <View className='items-center justify-center flex-1'>
       <Text>Perfil</Text>
-    </Center>
+    </View>
   )
 }

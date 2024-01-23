@@ -9,7 +9,7 @@ interface Props {
   typeList?: string
 }
 
-export function NextDayOfServiceAndPatient({date,title,color,typeList}: Props) {
+export function NextDayOfServiceAndPatient({ date, title, color, typeList }: Props) {
 
   return (
     <View className='mt-2 bg-blue-100 rounded-md p-2 justify-between flex-row'>
@@ -22,7 +22,7 @@ export function NextDayOfServiceAndPatient({date,title,color,typeList}: Props) {
       </Text>
       {/* <MaterialIcons name="visibility" /> */}
       <View>
-      <MaterialIcons name="visibility" size={25} m={1} color='blue'/>
+        <MaterialIcons name="visibility" size={25} m={1} color='blue' />
       </View>
     </View>
   )

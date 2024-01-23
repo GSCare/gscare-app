@@ -13,9 +13,9 @@ export function PatientCalendar() {
 
   return (
     <View className="flex-col flex-1">
-      <PageHeader title='Agenda de trabalho'/>
-      
-      <DescPageHeader title="Pacientes da semana"/>
+      <PageHeader title='Agenda de trabalho' />
+
+      <DescPageHeader title="Pacientes da semana" />
 
       <View className="flex-col justify-around px-10">
         <TodaysPatientInfo />
@@ -31,11 +31,11 @@ export function PatientCalendar() {
           </ScrollView>
         </View>
 
-        
-        <View className="flex-col mt-12 mb-9"> 
-          <ButtonComp 
+
+        <View className="flex-col mt-12 mb-9">
+          <ButtonComp
             title="Definir Agenda de Atendimento"
-            onPress={() => setShowModal(true)}
+
           />
           {/* Modal */}
           <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
@@ -55,13 +55,13 @@ export function PatientCalendar() {
               <Modal.Footer>
                 <Button.Group space={2}>
                   <Button variant="ghost" colorScheme="blueGray" onPress={() => {
-                  setShowModal(false);
-                }}>
+                    setShowModal(false);
+                  }}>
                     Cancel
                   </Button>
                   <Button onPress={() => {
-                  setShowModal(false);
-                }}>
+                    setShowModal(false);
+                  }}>
                     Save
                   </Button>
                 </Button.Group>
@@ -70,7 +70,7 @@ export function PatientCalendar() {
           </Modal>
         </View>
       </View>
-      
+
     </View>
   )
 }

@@ -28,7 +28,7 @@ export function Button({ title, variant = "solid", ...rest }: Props) {
         border-orange
         rounded-md
       `}
-    
+
       {...rest}
     >
       <Text

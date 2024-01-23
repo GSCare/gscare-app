@@ -1,9 +1,9 @@
-import { Center, Text } from "native-base";
+import { Text, View } from "react-native";
 
 export function ComplaintsAndNotices() {
   return (
-    <Center flex={1}>
+    <View className="flex-1 flex-col">
       <Text>reclamações e avisos</Text>
-    </Center>
+    </View>
   )
 }

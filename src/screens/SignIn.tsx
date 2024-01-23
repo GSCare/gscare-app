@@ -34,14 +34,20 @@ export function SignIn() {
           <Text className='text-white text-2xl mb-6 font-bold mx-auto'>
             Acesse sua conta
           </Text>
-          <Input
-            placeholder='Email'
-            value=''
-          />
-          <Input
-            placeholder='Senha'
-            value=''
-          />
+          <View className="w-50 h-20 py-3">
+
+            <Input
+              placeholder='Email'
+              value=''
+            />
+          </View>
+          <View className="w-50 h-20 py-3">
+
+            <Input
+              placeholder='Senha'
+              value=''
+            />
+          </View>
 
           <Button title="Acessar" />
         </View>
@@ -51,10 +57,10 @@ export function SignIn() {
             title="Crie sua conta!"
             variant="outline"
           />
-          <TouchableOpacity 
+          <TouchableOpacity
             onPress={handleNewAccount}>
-              <Text>Teste</Text>
-            </TouchableOpacity>
+            <Text>Teste</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>

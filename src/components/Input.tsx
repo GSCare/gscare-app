@@ -1,30 +1,29 @@
-import { TextInput, TextInputProps } from "react-native";
+import React from "react";
+import { TextInput, TextInputProps, View } from "react-native";
 
 interface InputProps extends TextInputProps {
   value: string;
   placeholder: string;
 }
 
-export function Input({ value, placeholder,...props }:InputProps) {
-
+export function Input({ value, placeholder, ...props }: InputProps) {
   return (
-    <TextInput 
-      className="
-        bg-gray-200
-        w-full
-        h-14
-        p-4
-        b-0
-        rounded-md
-        text-lg 
-        text-gray-400 
-        mb-4 
-        focus:bg-white 
-        focus:b-1 
-        focus:border-orange-500"
-      value={value}
-      placeholder={placeholder}
-      {...props}
-    />
-  )
+    <View style={{ position: "relative" }}>
+      <TextInput
+        style={{
+          backgroundColor: "#E5E7EB",
+          width: "100%",
+          height: "100%",
+          padding: 16,
+          borderWidth: 0,
+          borderRadius: 8,
+          fontSize: 16,
+          color: "#718096",
+        }}
+        placeholder={placeholder}
+        textAlignVertical="top" // Esta linha faz o placeholder ficar no topo
+        {...props}
+      />
+    </View>
+  );
 }

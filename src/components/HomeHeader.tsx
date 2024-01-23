@@ -6,10 +6,12 @@ import { Text, TouchableOpacity, View } from "react-native";
 export function HomeHeader() {
   return (
     <View className="bg-blue-500 pt-16 pb-5 px-8 justify-center flex-row">
-      <UserPhoto 
-        sourceUrl='https://github.com/luisfelipeprs.png'
-        altDescription="Imagem do usuário ou empresa"
-      />
+      <View className='w-16 h-16 mr-3'>
+        <UserPhoto
+          sourceUrl='https://github.com/luisfelipeprs.png'
+          altDescription="Imagem do usuário ou empresa"
+        />
+      </View>
 
       <View className="flex-1">
         <Text className="text-blue-200 text-sm">
@@ -19,7 +21,7 @@ export function HomeHeader() {
           Luís Felipe
         </Text>
 
-        
+
         <Text className="text-orange-400 text-xs">
           Home Care TI
         </Text>
