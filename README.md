@@ -33,7 +33,7 @@
 - [✅] `src/screens/Settings.tsx`
 - [✅] `src/screens/Profile.tsx`
 - [✅] `src/screens/PatientsMedicalDocuments.tsx`
-- [🚧] `src/screens/PatientCalendar.tsx`
+- [✅] `src/screens/PatientCalendar.tsx`
 - [✅] `src/screens/MedicationSchedules.tsx`
 - [✅] `src/screens/Home.tsx`
 - [✅] `src/screens/FoodAndMedicineAllergies.tsx`
