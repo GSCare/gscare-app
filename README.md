@@ -44,7 +44,7 @@
 - [✅] `src/screens/AttendanceCalendar.tsx`
 - [✅] `src/routes/Routes.tsx`
 - [🚧] `src/routes/AppRoutes.tsx`
-- [🚧] `src/components/Loading.tsx`
+- [✅] `src/components/Loading.tsx`
 - [✅] `src/theme/index.ts`
 - [🚧] `./App.tsx`
 
