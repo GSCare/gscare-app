@@ -1,5 +1,5 @@
-import { Platform } from 'react-native'
-import { Icon, useTheme } from "native-base"
+import { Platform, Text } from 'react-native'
+import { Icon } from "native-base"
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import HomeSvg from "@assets/home.svg"
@@ -21,6 +21,7 @@ import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from '@screens/PatientCalendar';
 import { MaterialIcons } from '@expo/vector-icons';
+
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -47,22 +48,31 @@ export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
 const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>()
 
 export function AppRoutes() {
-  const { sizes, colors } = useTheme()
-
-  const iconSize = sizes[7]
-
   return (
+    // <Navigator
+    //   screenOptions={{
+    //     headerShown: false,
+    //     tabBarShowLabel: false,
+    //     tabBarStyle: {
+    //       backgroundColor: 'blue', // Set your desired background color
+    //       borderTopWidth: 0,
+    //       height: Platform.OS === 'android' ? 'auto' : 96,
+    //       paddingBottom: 30, // Adjust as needed
+    //       paddingTop: 30, // Adjust as needed
+    //     },
+    //   }}
+    // >
     <Navigator screenOptions={{
       headerShown: false,
       tabBarShowLabel: false,
-      tabBarActiveTintColor: colors.white,
-      tabBarInactiveTintColor: colors.blue[300],
+      tabBarActiveTintColor: "#ffffff",
+      tabBarInactiveTintColor: "#75c3ff",
       tabBarStyle: {
-        backgroundColor: colors.blue[500],
+        backgroundColor: "#3282f9",
         borderTopWidth: 0,
         height: Platform.OS === 'android' ? 'auto' : 96,
-        paddingBottom: sizes[10],
-        paddingTop: sizes[6]
+        paddingBottom: 40,
+        paddingTop: 30,
       }
     }}>
       <Screen
