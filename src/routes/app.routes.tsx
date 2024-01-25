@@ -1,10 +1,10 @@
-import { Platform, Text } from 'react-native'
-import { Icon } from "native-base"
-import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import { Platform } from "react-native";
+import {
+  createBottomTabNavigator,
+  BottomTabNavigationProp,
+} from "@react-navigation/bottom-tabs";
 
-import HomeSvg from "@assets/home.svg"
-import ProfileSvg from "@assets/profile.svg"
-import CalendarSvg from "@assets/calendar.svg"
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { Home } from "@screens/Home";
 import { AttendanceCalendar } from "@screens/AttendanceCalendar";
@@ -19,15 +19,14 @@ import { Profile } from "@screens/Profile";
 import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
-import { PatientCalendar } from '@screens/PatientCalendar';
-import { MaterialIcons } from '@expo/vector-icons';
-
+import { PatientCalendar } from "@screens/PatientCalendar";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
   home: undefined;
   patientCalendar: undefined;
   settings: undefined;
+  
   // ? rotas que ficaram nas divs da home
   attendanceCalendar: undefined;
   clientsPathologies: undefined;
@@ -36,73 +35,66 @@ export type AppRoutes = {
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
   consultationCalendar: undefined;
-  // ! essas rotas abaixo só seram usadas na segunda versa
+
+  // ! essas rotas abaixo só seram usadas na segunda versao
   patientsMedicalDocuments: undefined;
   foodAndMedicineAllergies: undefined;
   complaintsAndNotices: undefined;
   profile: undefined;
-}
+};
 
-export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>
+export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
 
 const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>()
+// const Tab = createBottomTabNavigator<AppRoutes>();
 
 export function AppRoutes() {
   return (
-    // <Navigator
-    //   screenOptions={{
-    //     headerShown: false,
-    //     tabBarShowLabel: false,
-    //     tabBarStyle: {
-    //       backgroundColor: 'blue', // Set your desired background color
-    //       borderTopWidth: 0,
-    //       height: Platform.OS === 'android' ? 'auto' : 96,
-    //       paddingBottom: 30, // Adjust as needed
-    //       paddingTop: 30, // Adjust as needed
-    //     },
-    //   }}
-    // >
-    <Navigator screenOptions={{
-      headerShown: false,
-      tabBarShowLabel: false,
-      tabBarActiveTintColor: "#ffffff",
-      tabBarInactiveTintColor: "#75c3ff",
-      tabBarStyle: {
-        backgroundColor: "#3282f9",
-        borderTopWidth: 0,
-        height: Platform.OS === 'android' ? 'auto' : 96,
-        paddingBottom: 40,
-        paddingTop: 30,
-      }
-    }}>
+    <Navigator
+      initialRouteName="home"
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: "#ffffff",
+        tabBarInactiveTintColor: "#75c3ff",
+        tabBarStyle: {
+          backgroundColor: "#3282f9",
+          borderTopWidth: 0,
+          height: Platform.OS === "android" ? 55 : 96,
+          paddingBottom: 10,
+          paddingTop: 10,
+        },
+      }}
+    >
+
       <Screen
         name="home"
         component={Home}
         options={{
-          tabBarIcon: ({ color }) => (
-            // <HomeSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="home" size={6} m={2} color={color} />
-          )
+          tabBarLabel: "home",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
         }}
       />
       <Screen
         name="patientCalendar"
         component={PatientCalendar}
         options={{
-          tabBarIcon: ({ color }) => (
-            // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="date-range" size={6} m={2} color={color} />
-          )
+          tabBarLabel: "patientCalendar",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="calendar" color={color} size={size} />
+          ),
         }}
       />
       <Screen
         name="settings"
         component={Settings}
         options={{
-          tabBarIcon: ({ color }) => (
-            // <ProfileSvg fill={color} width={iconSize} height={iconSize}/>
-            <Icon as={MaterialIcons} name="menu" size={6} m={2} color={color} />
-          )
+          tabBarLabel: "settings",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="cog" color={color} size={size} />
+          ),
         }}
       />
       <Screen
@@ -161,5 +153,5 @@ export function AppRoutes() {
         options={{ tabBarButton: () => null }}
       />
     </Navigator>
-  )
+  );
 }
