@@ -1,8 +1,7 @@
 import { DescPageHeader } from "@components/DescPageHeader";
 import { MaterialIcons } from '@expo/vector-icons';
 import { PageHeader } from "@components/PageHeader";
-import { VStack, Fab, Icon, View, Text, ScrollView } from "native-base";
-import { TouchableOpacity } from "react-native";
+import { ScrollView, TouchableOpacity, View, Text } from "react-native";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
 import { ListItem } from "@components/ListItem";
 

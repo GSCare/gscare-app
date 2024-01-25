@@ -46,7 +46,11 @@
 - [✅] `src/routes/AppRoutes.tsx`
 - [✅] `src/components/Loading.tsx`
 - [✅] `src/theme/index.ts`
-- [🚧] `./App.tsx`
+- [✅] `./App.tsx`
+
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+## TODOS OS ARQUIVOS CORRIGIDOS: NATIVE-BASE REMOVIDO !!!
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 Legenda:
 - 🚧: Incompleto
