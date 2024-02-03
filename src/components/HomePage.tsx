@@ -30,7 +30,7 @@ export function HomePage() {
           desc='Patoligias do cliente'
           icon={'info-outline'}
           handleButtonPress={handleButtonPress}
-          parametro={'clientsPathologies'}
+          parametro={'financial'}
         />
       </View>
 

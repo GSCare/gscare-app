@@ -20,6 +20,7 @@ import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from "@screens/PatientCalendar";
+import { Financial } from "@screens/Financial";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -35,6 +36,7 @@ export type AppRoutes = {
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
   consultationCalendar: undefined;
+  financial: undefined;
 
   // ! essas rotas abaixo só seram usadas na segunda versao
   patientsMedicalDocuments: undefined;
@@ -125,6 +127,11 @@ export function AppRoutes() {
       <Screen
         name="clientsPathologies"
         component={ClientsPathologies}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="financial"
+        component={Financial}
         options={{ tabBarButton: () => null }}
       />
       <Screen
