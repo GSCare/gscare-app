@@ -5,12 +5,7 @@ import { DescPageHeader } from "./DescPageHeader";
 
 export function FinancialCards(){
   return(
-    <View className="flex-1 flex-col">
-
-    <PageHeader title='Financeiro' />
-
-  <DescPageHeader title="Financial Care" />
-    <View className="flex-1">
+<>
     <View className="flex-row">
       {/* Card Enviado */}
       <View className="flex-1 p-4 m-2 bg-white rounded shadow-md shadow-black">
@@ -38,7 +33,7 @@ export function FinancialCards(){
         <Text className="text-red-400 text-xl font-bold">R$ 0,00</Text>
       </View>
     </View>
-  </View>
-      </View>
+</>
+
 );
 };
