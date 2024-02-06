@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, Modal, TextInput } from 'react-native';
-
+import { Octicons } from '@expo/vector-icons';
 
 interface FilterModalProps {
   isVisible: boolean;
@@ -9,7 +9,7 @@ interface FilterModalProps {
   onClearFilter: () => void;
 }
 
-const FilterModal: React.FC<FilterModalProps> = ({ isVisible, onClose, onFilter, onClearFilter }) => {
+const FilterModalData: React.FC<FilterModalProps> = ({ isVisible, onClose, onFilter, onClearFilter }) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
 
@@ -36,6 +36,9 @@ const FilterModal: React.FC<FilterModalProps> = ({ isVisible, onClose, onFilter,
     >
       <View className='flex-1 justify-end'>
         <View className='bg-white p-4 gap-4 rounded-tl-[30] rounded-tr-[9]'>
+          <View className='items-center justify-center'>
+            <Octicons name="horizontal-rule" size={30} color="gray" />
+          </View>
           <View className='flex-row justify-between items-center'>
             <Text className='text-black text-xl font-bold'>Datas</Text>
             <TouchableOpacity
@@ -79,7 +82,7 @@ const FilterModal: React.FC<FilterModalProps> = ({ isVisible, onClose, onFilter,
             </View>
           </View>
           <View className='items-center'>
-          <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. adipisicing elit. adipisicing elit. </Text>
+            <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. adipisicing elit. adipisicing elit. </Text>
           </View>
           <View className='flex-col gap-2 '>
             <TouchableOpacity
@@ -102,4 +105,4 @@ const FilterModal: React.FC<FilterModalProps> = ({ isVisible, onClose, onFilter,
   );
 };
 
-export default FilterModal;
+export default FilterModalData;

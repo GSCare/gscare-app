@@ -11,7 +11,7 @@ export function DescPageHeader({title}: Props) {
         <Text className='mx-2 text-xl text-blue-400 max-w-264'>
         {title}
         </Text>
-      <View className='flex-1 border-b-2 border-b-blue-300 ml-2'></View>
+      <View className='flex-1 border-b-2 border-b-blue-300 mr-2'></View>
     </View>
   )
 }

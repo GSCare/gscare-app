@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 
-import FilterModal from './FilterModal';
+import FilterModalData from './FilterModalData';
 
 import { AntDesign } from '@expo/vector-icons';
 
 
-const FilterFinancial: React.FC = () => {
+const FilterFinancialData: React.FC = () => {
   const [filterModalVisible, setFilterModalVisible] = useState<boolean>(false);
 
   const handleOpenFilterModal = () => {
@@ -34,15 +34,14 @@ const FilterFinancial: React.FC = () => {
         <View>
           <TouchableOpacity
             className='border-[1px] border-gray-300 w-20 rounded-full p-2 flex-row'
-            onPress={handleOpenFilterModal}
-          >
+            onPress={handleOpenFilterModal}>
             <Text className='m-auto'>Datas</Text>
             <View className='m-auto'>
               <AntDesign name="down" size={15} color="black" />
             </View>
           </TouchableOpacity>
 
-          <FilterModal
+          <FilterModalData
             isVisible={filterModalVisible}
             onClose={handleCloseFilterModal}
             onFilter={handleFilter}
@@ -54,4 +53,4 @@ const FilterFinancial: React.FC = () => {
   );
 };
 
-export default FilterFinancial;
+export default FilterFinancialData;
