@@ -3,8 +3,9 @@ import FilterFinancialData from "@components/FilterFinancialData";
 import FilterFinancialType from "@components/FilterFinancialType";
 import { FinancialCards } from "@components/FinancialCards";
 import { PageHeader } from "@components/PageHeader";
+import TransactionCard from "@components/TransactionCard";
 import { useState } from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 
 export function Financial() {
 
@@ -15,9 +16,20 @@ export function Financial() {
       <DescPageHeader title="Financial Care" />
       <FinancialCards />
       <View className="flex-row">
-          <FilterFinancialData />
-          <FilterFinancialType />
+        <FilterFinancialData />
+        <FilterFinancialType />
       </View>
+      <ScrollView>
+        <TransactionCard
+          month="Fevereiro"
+          date="Sábado, 07 fev 2024"
+          balance='829,35'
+          type="Pix enviado"
+          value={'730,00'}
+          name="João Franco Fernando da Silva"
+          category="Alimentação"
+        />
+      </ScrollView>
     </View>
 
   )
