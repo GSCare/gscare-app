@@ -27,6 +27,12 @@ export function HomePage() {
           parametro={'dailyReport'}
         />
         <HomeButtonOptionTools
+          desc='Consultas Diárias'
+          icon={'perm-contact-calendar'}
+          handleButtonPress={handleButtonPress}
+          parametro={'dailyAppointments'}
+        />
+        <HomeButtonOptionTools
           desc='Patoligias do cliente'
           icon={'info-outline'}
           handleButtonPress={handleButtonPress}

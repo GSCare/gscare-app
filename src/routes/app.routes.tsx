@@ -21,17 +21,19 @@ import { SupplyMonitoring } from "@screens/SupplyMonitoring";
 import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from "@screens/PatientCalendar";
 import { Financial } from "@screens/Financial";
+import { DailyAppointments } from "@screens/DailyAppointments";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
   home: undefined;
   patientCalendar: undefined;
   settings: undefined;
-  
+
   // ? rotas que ficaram nas divs da home
   attendanceCalendar: undefined;
   clientsPathologies: undefined;
   dailyReport: undefined;
+  dailyAppointments: undefined;
   emergencyPhones: undefined;
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
@@ -109,6 +111,11 @@ export function AppRoutes() {
         component={DailyReport}
         options={{ tabBarButton: () => null }}
       />
+      <Screen
+        name="dailyAppointments"
+        component={DailyAppointments}
+        options={{ tabBarButton: () => null }}
+      /> 
       <Screen
         name="foodAndMedicineAllergies"
         component={FoodAndMedicineAllergies}
