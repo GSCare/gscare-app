@@ -9,7 +9,7 @@ export function DailyAppointments() {
       <PageHeader title='Consultas do Dia' />
       <DescPageHeader title="Agenda de plantões" />
       <View className="mx-4 mt-5">
-        <PlantaoCard />
+        <PlantaoCard status="Disponível" shift={12} start="15/02/2024" end="16/02/2024"/>
       </View>
     </View>
   )

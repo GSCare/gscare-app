@@ -1,21 +1,34 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-const PlantaoCard = () => {
+interface IProps{
+  status: "Concluído" | "Disponível" | "Indisponível";
+  shift: number;
+  start:string;
+  end:string;
+}
+
+function PlantaoCard({status,shift,start,end}:IProps) {
+  let backgroundColor = 'bg-gray-600';
+  if (status === 'Disponível') {
+    backgroundColor = 'bg-blue-500';
+  } else if (status === 'Concluído') {
+    backgroundColor = 'bg-green-500';
+  }
   return (
     <View className='bg-white rounded-lg shadow-md'>
       <View className='flex-row justify-between items-center mb-2'>
-        <View className='bg-green-500 w-full py-4 px-2 rounded'>
+        <View className={`${backgroundColor} w-full py-4 px-2 rounded`}>
           <Text className='text-xl font-bold text-white'>
-            Concluído
+          {status}
           </Text>
         </View>
       </View>
       <View className='justify-between flex-row p-4'>
         <View>
-          <Text className='text-base text-gray-500'>Plantão 24 horas</Text>
-          <Text className='text-base text-gray-500'>Data de início: 15/02/2024</Text>
-          <Text className='text-base text-gray-500'>Data de fim: 16/02/2024</Text>
+          <Text className='text-base text-gray-500'>Plantão {shift} horas</Text>
+          <Text className='text-base text-gray-500'>Data de início: {start}</Text>
+          <Text className='text-base text-gray-500'>Data de fim: {end}</Text>
           {/* Mais informações aqui */}
         </View>
         <View className='justify-center'>
