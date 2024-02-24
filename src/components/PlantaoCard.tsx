@@ -15,6 +15,8 @@ function PlantaoCard({status,shift,start,end}:IProps) {
   } else if (status === 'Concluído') {
     backgroundColor = 'bg-green-500';
   }
+  let buttonText = status === 'Disponível' ? 'Iniciar' : 'Ver';
+  let buttonClasses = status === 'Indisponível' ? 'hidden' : 'flex';
   return (
     <View className='bg-white rounded-lg shadow-md'>
       <View className='flex-row justify-between items-center mb-2'>
@@ -31,9 +33,9 @@ function PlantaoCard({status,shift,start,end}:IProps) {
           <Text className='text-base text-gray-500'>Data de fim: {end}</Text>
           {/* Mais informações aqui */}
         </View>
-        <View className='justify-center'>
+        <View className={`justify-center ${buttonClasses}`}>
           <TouchableOpacity className='bg-blue-500 p-2 rounded' onPress={() => console.log('Ver plantão')}>
-            <Text className='text-white text-base items-center'>Ver plantão</Text>
+            <Text className='text-white text-base items-center'>{buttonText} plantão</Text>
           </TouchableOpacity>
         </View>
       </View>
