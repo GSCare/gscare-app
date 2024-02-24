@@ -6,7 +6,6 @@ import { DescPageHeader } from './DescPageHeader';
 import { HomeButtonOptionTools } from './HomeButtonOptionTools';
 import { View } from 'react-native';
 
-
 type NavigationType = NavigationProp<AppRoutes>;
 
 export function HomePage() {
@@ -27,10 +26,10 @@ export function HomePage() {
           parametro={'dailyReport'}
         />
         <HomeButtonOptionTools
-          desc='Consultas Diárias'
+          desc='Pessoas sob cuidados'
           icon={'perm-contact-calendar'}
           handleButtonPress={handleButtonPress}
-          parametro={'dailyAppointments'}
+          parametro={'peopleCare'}
         />
         <HomeButtonOptionTools
           desc='Patoligias do cliente'

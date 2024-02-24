@@ -22,6 +22,7 @@ import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from "@screens/PatientCalendar";
 import { Financial } from "@screens/Financial";
 import { DailyAppointments } from "@screens/DailyAppointments";
+import { PeopleCare } from "@screens/PeopleCare";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -34,6 +35,7 @@ export type AppRoutes = {
   clientsPathologies: undefined;
   dailyReport: undefined;
   dailyAppointments: undefined;
+  peopleCare: undefined;
   emergencyPhones: undefined;
   supplyMonitoring: undefined;
   medicationSchedules: undefined;
@@ -112,10 +114,15 @@ export function AppRoutes() {
         options={{ tabBarButton: () => null }}
       />
       <Screen
+        name="peopleCare"
+        component={PeopleCare}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
         name="dailyAppointments"
         component={DailyAppointments}
         options={{ tabBarButton: () => null }}
-      /> 
+      />
       <Screen
         name="foodAndMedicineAllergies"
         component={FoodAndMedicineAllergies}
