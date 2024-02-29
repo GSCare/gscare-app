@@ -23,6 +23,8 @@ import { PatientCalendar } from "@screens/PatientCalendar";
 import { Financial } from "@screens/Financial";
 import { DailyAppointments } from "@screens/DailyAppointments";
 import { PeopleCare } from "@screens/PeopleCare";
+import { Routine } from "@screens/Routine";
+import { LastRoutine } from "@screens/LastRoutine";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -47,6 +49,8 @@ export type AppRoutes = {
   foodAndMedicineAllergies: undefined;
   complaintsAndNotices: undefined;
   profile: undefined;
+  routine: undefined;
+  Lastroutine:undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -171,6 +175,16 @@ export function AppRoutes() {
       <Screen
         name="supplyMonitoring"
         component={SupplyMonitoring}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="routine"
+        component={Routine}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="Lastroutine"
+        component={LastRoutine}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>

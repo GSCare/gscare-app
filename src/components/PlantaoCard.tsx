@@ -1,14 +1,22 @@
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigatorRoutesProps } from '@routes/app.routes';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
-interface IProps{
+interface IProps {
   status: "Concluído" | "Disponível" | "Indisponível";
   shift: number;
-  start:string;
-  end:string;
+  start: string;
+  end: string;
 }
 
-function PlantaoCard({status,shift,start,end}:IProps) {
+function PlantaoCard({ status, shift, start, end }: IProps) {
+  const navigation = useNavigation<AppNavigatorRoutesProps>()
+
+  function handleComponent() {
+    navigation.navigate('Lastroutine')
+  }
+
   let backgroundColor = 'bg-gray-600';
   if (status === 'Disponível') {
     backgroundColor = 'bg-blue-500';
@@ -22,7 +30,7 @@ function PlantaoCard({status,shift,start,end}:IProps) {
       <View className='flex-row justify-between items-center mb-2'>
         <View className={`${backgroundColor} w-full py-4 px-2 rounded`}>
           <Text className='text-xl font-bold text-white'>
-          {status}
+            {status}
           </Text>
         </View>
       </View>
@@ -34,7 +42,7 @@ function PlantaoCard({status,shift,start,end}:IProps) {
           {/* Mais informações aqui */}
         </View>
         <View className={`justify-center ${buttonClasses}`}>
-          <TouchableOpacity className='bg-blue-500 p-2 rounded' onPress={() => console.log('Ver plantão')}>
+          <TouchableOpacity className='bg-blue-500 p-2 rounded' onPress={handleComponent}>
             <Text className='text-white text-base items-center'>{buttonText} plantão</Text>
           </TouchableOpacity>
         </View>

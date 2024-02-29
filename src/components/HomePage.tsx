@@ -31,12 +31,6 @@ export function HomePage() {
           handleButtonPress={handleButtonPress}
           parametro={'peopleCare'}
         />
-        <HomeButtonOptionTools
-          desc='Patoligias do cliente'
-          icon={'info-outline'}
-          handleButtonPress={handleButtonPress}
-          parametro={'financial'}
-        />
       </View>
 
       <View className='justify-around mb-1 mt-1 flex-row'>
@@ -66,6 +60,14 @@ export function HomePage() {
           icon={'phone'}
           handleButtonPress={handleButtonPress}
           parametro={'emergencyPhones'}
+        />
+      </View>
+      <View className='justify-around mb-1 mt-1 flex-row'>
+      <HomeButtonOptionTools
+        desc='Patoligias do cliente'
+        icon={'info-outline'}
+        handleButtonPress={handleButtonPress}
+        parametro={'financial'}
         />
       </View>
     </View>
