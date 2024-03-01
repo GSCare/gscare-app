@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, Image } from "react-native";
 import { CardRemedy } from "./CardRemedy";
 import { RegistrationActivitiesHealth } from "./RegistrationActivitiesHealth";
 import { TimeCard } from "./TimeCard";
-import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export function StatusCardRoutine() {
   const [showCards, setShowCards] = useState(true);
@@ -11,7 +11,8 @@ export function StatusCardRoutine() {
 
   const toggleShowCards = () => {
     setShowCards(!showCards);
-    setArrowRotation(arrowRotation === 0 ? 90 : 0); // Rotate arrow 90 degrees if it's not rotated, otherwise rotate it back to 0
+    setArrowRotation(arrowRotation === 0 ? 270 : 0);
+
   };
 
   return (
@@ -21,10 +22,10 @@ export function StatusCardRoutine() {
           className="flex-row items-center p-2"
           onPress={toggleShowCards}
         >
-          <Text className="mr-2 text-base font-bold">Atividades</Text>
-          <AntDesign name="caretdown" size={15} color="black"
-            style={{ transform: [{ rotate: `${arrowRotation}deg` }] }}
+         <MaterialIcons name="keyboard-arrow-down" size={24} color="black"
+            style={{ transform: [{ rotate: `${arrowRotation}deg` }], marginRight:7}}
           />
+          <Text className="mr-2 text-base font-bold">Atividades</Text>
         </TouchableOpacity>
       </View>
       {showCards && (

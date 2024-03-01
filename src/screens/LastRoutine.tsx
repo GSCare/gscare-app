@@ -23,15 +23,15 @@ export function LastRoutine({ date }: IProps) {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="items-center">
           <View className="w-72 items-center mt-10">
-            <Text className="text-2xl font-bold">Veja o que aconteceu na última rotina do paciente</Text>
+            <Text className="text-2xl font-bold text-[#2d5970]">Veja o que aconteceu na última rotina do paciente</Text>
           </View>
           <View className="w-72 justify-center flex-row m-6">
             <Text className="text-base">Realizado em </Text>
             <Text className="text-base font-bold">{date}</Text>
           </View>
         </View>
-        <StatusCardRoutine />
         <StatusCardDanger />
+        <StatusCardRoutine />
       </ScrollView>
     </View>
   );
