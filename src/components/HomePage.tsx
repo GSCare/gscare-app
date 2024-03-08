@@ -63,11 +63,23 @@ export function HomePage() {
         />
       </View>
       <View className='justify-around mb-1 mt-1 flex-row'>
-      <HomeButtonOptionTools
-        desc='Patoligias do cliente'
-        icon={'info-outline'}
-        handleButtonPress={handleButtonPress}
-        parametro={'financial'}
+        <HomeButtonOptionTools
+          desc='Patoligias do cliente'
+          icon={'info-outline'}
+          handleButtonPress={handleButtonPress}
+          parametro={'financial'}
+        />
+        <HomeButtonOptionTools
+          desc='Adicionar Intercorrência'
+          icon={'info-outline'}
+          handleButtonPress={handleButtonPress}
+          parametro={'addIntercurrence'}
+        />
+        <HomeButtonOptionTools
+          desc='Adicionar Compromisso'
+          icon={'info-outline'}
+          handleButtonPress={handleButtonPress}
+          parametro={'helpScreen'}
         />
       </View>
     </View>

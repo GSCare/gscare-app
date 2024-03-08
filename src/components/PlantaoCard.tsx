@@ -13,8 +13,11 @@ interface IProps {
 function PlantaoCard({ status, shift, start, end }: IProps) {
   const navigation = useNavigation<AppNavigatorRoutesProps>()
 
-  function handleComponent() {
-    navigation.navigate('Lastroutine')
+  function handleComponentRoutine() {
+    navigation.navigate('routine')
+  }
+  function handleComponentLastRoutine() {
+    navigation.navigate('lastRoutine')
   }
 
   let backgroundColor = 'bg-gray-600';
@@ -25,6 +28,8 @@ function PlantaoCard({ status, shift, start, end }: IProps) {
   }
   let buttonText = status === 'Disponível' ? 'Iniciar' : 'Ver';
   let buttonClasses = status === 'Indisponível' ? 'hidden' : 'flex';
+  let handleFunction = status === 'Concluído' ? handleComponentLastRoutine : handleComponentRoutine;
+
   return (
     <View className='bg-white rounded-lg shadow-md'>
       <View className='flex-row justify-between items-center mb-2'>
@@ -42,7 +47,7 @@ function PlantaoCard({ status, shift, start, end }: IProps) {
           {/* Mais informações aqui */}
         </View>
         <View className={`justify-center ${buttonClasses}`}>
-          <TouchableOpacity className='bg-blue-500 p-2 rounded' onPress={handleComponent}>
+          <TouchableOpacity className='bg-blue-500 p-2 rounded' onPress={handleFunction}>
             <Text className='text-white text-base items-center'>{buttonText} plantão</Text>
           </TouchableOpacity>
         </View>
@@ -50,5 +55,6 @@ function PlantaoCard({ status, shift, start, end }: IProps) {
     </View>
   );
 };
+
 
 export default PlantaoCard;
