@@ -20,18 +20,25 @@ export function StatusCardDanger() {
     <View className="flex-1">
       <View className="flex-row mt-10 mb-5 ml-10">
         <TouchableOpacity
-          className="flex-row items-center p-2"
+          className="flex-row items-center p-2 mr-[120px]"
           onPress={toggleShowCards}
         >
-         <MaterialIcons name="keyboard-arrow-down" size={24} color="black"
-            style={{ transform: [{ rotate: `${arrowRotation}deg` }], marginRight:7}}
+          <MaterialIcons name="keyboard-arrow-down" size={24} color="black"
+            style={{ transform: [{ rotate: `${arrowRotation}deg` }], marginRight: 7 }}
           />
           <Text className="mr-2 text-base font-bold">Intercorrências</Text>
         </TouchableOpacity>
+        <View>
+          <TouchableOpacity className="bg-blue-400 rounded-full w-9 h-9 m-auto "/*onPress={toggleShowCards}*/>
+            <View className="m-auto">
+              <MaterialIcons name="add" size={22} color="white" />
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
       {showCards && (
         <View className="pl-2">
-          <CardDanger/>
+          <CardDanger />
         </View>
       )}
     </View>
