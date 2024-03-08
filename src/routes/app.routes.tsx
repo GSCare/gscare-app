@@ -25,6 +25,9 @@ import { DailyAppointments } from "@screens/DailyAppointments";
 import { PeopleCare } from "@screens/PeopleCare";
 import { Routine } from "@screens/Routine";
 import { LastRoutine } from "@screens/LastRoutine";
+import { AddIntercurrence } from "@screens/AddIntercurrence";
+import { AddAppointmentScreen } from "@screens/AddAppointment";
+import Help from "@screens/Help";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -50,7 +53,10 @@ export type AppRoutes = {
   complaintsAndNotices: undefined;
   profile: undefined;
   routine: undefined;
-  Lastroutine:undefined;
+  lastRoutine: undefined;
+  addIntercurrence: undefined;
+  addAppointment: undefined;
+  helpScreen:undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -183,8 +189,23 @@ export function AppRoutes() {
         options={{ tabBarButton: () => null }}
       />
       <Screen
-        name="Lastroutine"
+        name="lastRoutine"
         component={LastRoutine}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="addIntercurrence"
+        component={AddIntercurrence}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="addAppointment"
+        component={AddAppointmentScreen}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="helpScreen"
+        component={Help}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>

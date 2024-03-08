@@ -16,10 +16,21 @@ export function Routine() {
   return (
     <View className="flex-1">
       <PageHeader title="Rotina do cliente" />
-      <DescPageHeader title="Rotina do paciente" />
+      <DescPageHeader title="Roteiro do plantão" />
       <ScrollView showsVerticalScrollIndicator={false}>
-      <StatusCardRoutine />
-      <StatusCardDanger />
+        <View className="flex-col mt-10 mb-5 ml-8">
+          <Text className="font-bold text-base">Rotinas</Text>
+          <View className="mt-4 flex-row">
+            <View className="mr-2 border-2 w-16 rounded-md p-1">
+              <Text className="font-bold text-sm m-auto">17/abr</Text>
+            </View>
+            <View>
+              <Text className="font-bold text-sm m-auto">Segunda-feira</Text>
+            </View>
+          </View>
+        </View>
+        <StatusCardDanger />
+        <StatusCardRoutine />
       </ScrollView>
     </View>
   );
