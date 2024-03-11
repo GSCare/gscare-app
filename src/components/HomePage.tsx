@@ -69,7 +69,7 @@ export function HomePage() {
           handleButtonPress={handleButtonPress}
           parametro={'financial'}
         />
-        <HomeButtonOptionTools
+        {/* <HomeButtonOptionTools
           desc='Adicionar Intercorrência'
           icon={'info-outline'}
           handleButtonPress={handleButtonPress}
@@ -80,6 +80,18 @@ export function HomePage() {
           icon={'info-outline'}
           handleButtonPress={handleButtonPress}
           parametro={'helpScreen'}
+        />
+        <HomeButtonOptionTools
+          desc='Historico de plantoes'
+          icon={'info-outline'}
+          handleButtonPress={handleButtonPress}
+          parametro={'shiftHistory'}
+        /> */}
+        <HomeButtonOptionTools
+          desc='Lista de compras'
+          icon={'info-outline'}
+          handleButtonPress={handleButtonPress}
+          parametro={'shoppingList'}
         />
       </View>
     </View>

@@ -28,6 +28,8 @@ import { LastRoutine } from "@screens/LastRoutine";
 import { AddIntercurrence } from "@screens/AddIntercurrence";
 import { AddAppointmentScreen } from "@screens/AddAppointment";
 import Help from "@screens/Help";
+import { ShiftHistory } from "@screens/ShiftHistory";
+import ShoppingList from "@screens/ShoppingList";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -56,7 +58,9 @@ export type AppRoutes = {
   lastRoutine: undefined;
   addIntercurrence: undefined;
   addAppointment: undefined;
-  helpScreen:undefined;
+  helpScreen: undefined;
+  shiftHistory: undefined;
+  shoppingList:undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -206,6 +210,16 @@ export function AppRoutes() {
       <Screen
         name="helpScreen"
         component={Help}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="shiftHistory"
+        component={ShiftHistory}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="shoppingList"
+        component={ShoppingList}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>
