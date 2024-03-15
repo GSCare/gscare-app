@@ -11,6 +11,7 @@ import { RegistrationActivitiesHealth } from "@components/RegistrationActivities
 import { TimeCard } from "@components/TimeCard";
 import { StatusCardRoutine } from "@components/StatusCardRoutine";
 import { StatusCardDanger } from "@components/StatusCardDanger";
+import CardQuestions from "@components/CardQuestions";
 
 export function Routine() {
   return (
@@ -31,6 +32,7 @@ export function Routine() {
         </View>
         <StatusCardDanger />
         <StatusCardRoutine />
+        <CardQuestions/>
       </ScrollView>
     </View>
   );
