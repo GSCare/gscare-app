@@ -29,33 +29,37 @@ const CardQuestions: React.FC = () => {
   };
 
   return (
-    <TouchableOpacity onPress={toggleExpansion} className="p-4 bg-gray-100 rounded-lg mb-4">
-      <Text className="text-xl font-bold">Saúde Mental</Text>
-      <Text>{`${questions.filter((q) => q.answer !== null).length}/4 perguntas respondidas`}</Text>
+    <View className='mb-8 flex-1'>
+      <TouchableOpacity onPress={toggleExpansion} className="p-4 bg-gray-200 rounded-t-xl rounded-b-sm">
+        <Text className="text-xl font-bold">Saúde Mental</Text>
+        <Text>{`${questions.filter((q) => q.answer !== null).length}/4 perguntas respondidas`}</Text>
+      </TouchableOpacity>
       {expanded && (
-        <View className="mt-4">
+        <View className="p-4 bg-gray-200 rounded-b-xl">
           {questions.map((q) => (
             <View key={q.id} className="flex-col mb-2">
-              <Text className="mr-2 mb-5">{q.question}</Text>
-              <View className="flex-row items-center gap-1 mb-5">
+              <Text className="mr-2 text-base">{q.question}</Text>
+              <View className="flex-row items-center gap-1 mb-5 mt-2">
                 <Checkbox
+                  className='w-6 h-6'
                   value={q.answer === true}
                   onValueChange={(value) => handleAnswer(q.id, value ? true : null)}
                 />
-                <Text className="mr-2">Sim</Text>
+                <Text className="mr-2 text-base">Sim</Text>
               </View>
               <View className="flex-row items-center gap-1 mb-5">
                 <Checkbox
+                  className='w-6 h-6'
                   value={q.answer === false}
                   onValueChange={(value) => handleAnswer(q.id, value ? false : null)}
                 />
-                <Text className="mr-2">Não</Text>
+                <Text className="mr-2 text-base">Não</Text>
               </View>
             </View>
           ))}
         </View>
       )}
-    </TouchableOpacity>
+    </View>
   );
 };
 

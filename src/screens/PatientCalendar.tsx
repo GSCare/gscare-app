@@ -5,10 +5,17 @@ import { TodaysPatientInfo } from "@components/TodaysPatientInfo";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
 import { PageHeader } from "@components/PageHeader";
 import { DescPageHeader } from "@components/DescPageHeader";
-import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback  } from "react-native";
+import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback } from "react-native";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
+  const handleBackgroundPress = () => {
+    setShowModal(false);
+  };
+
+  const handleModalPress = () => {
+    // Faz nada, apenas nao deixa o modal fechar
+  };
 
   return (
     <View className="flex-col flex-1">
@@ -43,7 +50,7 @@ export function PatientCalendar() {
           </View>
 
           {/* Modal */}
-          </View>
+        </View>
       </View>
 
       {showModal && (
@@ -51,39 +58,35 @@ export function PatientCalendar() {
           transparent={true}
           visible={showModal}
           onRequestClose={() => setShowModal(false)}
-        >          
-        {/* !!!  o modal fecha qunado clica em qualquer parte do modal, isso tem que ser corrigido
-          permitir apenas que feche quando clique no backgroud do modal
-         */}
-          <TouchableWithoutFeedback onPress={() => setShowModal(false)}>
+        >
+          <TouchableWithoutFeedback onPress={handleBackgroundPress}>
+            <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+              <TouchableWithoutFeedback onPress={handleModalPress}>
+                <View style={{ backgroundColor: "white", padding: 20, borderRadius: 8, width: 300 }}>
+                  <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Contact Us</Text>
 
-        {/* <View className="absolute top-0 bottom-0 left-0 right-0 bg-opacity-50 flex justify-center items-center"> */}
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={{ fontSize: 16 }}>Name</Text>
+                    <TextInput style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 4, padding: 8 }} />
+                  </View>
 
-          <View className="bg-white p-4 w-80 rounded-md">
-            <Text className="text-lg font-bold mb-2">Contact Us</Text>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={{ fontSize: 16 }}>Email</Text>
+                    <TextInput style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 4, padding: 8 }} />
+                  </View>
 
-            <View className="mb-4">
-              <Text className="text-sm">Name</Text>
-              <TextInput className="border border-gray-300 p-2 rounded" />
+                  <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                    <TouchableOpacity onPress={() => setShowModal(false)}>
+                      <Text style={{ color: "blue" }}>Cancel</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => setShowModal(false)}>
+                      <Text style={{ color: "blue" }}>Save</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </TouchableWithoutFeedback>
             </View>
-
-            <View className="mb-4">
-              <Text className="text-sm">Email</Text>
-              <TextInput className="border border-gray-300 p-2 rounded" />
-            </View>
-
-            <View className="flex-direction: row; justify-content: space-between">
-              <TouchableOpacity onPress={() => setShowModal(false)}>
-                <Text className="text-blue-500">Cancel</Text>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => setShowModal(false)}>
-                <Text className="text-blue-500">Save</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-        </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback>
         </Modal>
       )}
     </View>

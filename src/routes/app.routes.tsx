@@ -1,10 +1,11 @@
-import { Platform } from "react-native";
+import { Platform, Pressable, TouchableOpacity } from "react-native";
 import {
   createBottomTabNavigator,
   BottomTabNavigationProp,
 } from "@react-navigation/bottom-tabs";
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { MaterialIcons } from '@expo/vector-icons';
 
 import { Home } from "@screens/Home";
 import { AttendanceCalendar } from "@screens/AttendanceCalendar";
@@ -30,6 +31,8 @@ import { AddAppointmentScreen } from "@screens/AddAppointment";
 import Help from "@screens/Help";
 import { ShiftHistory } from "@screens/ShiftHistory";
 import ShoppingList from "@screens/ShoppingList";
+import { useState } from "react";
+import { AddModal } from "@components/ModalAddHome";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -60,7 +63,8 @@ export type AppRoutes = {
   addAppointment: undefined;
   helpScreen: undefined;
   shiftHistory: undefined;
-  shoppingList:undefined;
+  shoppingList: undefined;
+  addButton: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -69,6 +73,11 @@ const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>()
 // const Tab = createBottomTabNavigator<AppRoutes>();
 
 export function AppRoutes() {
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
   return (
     <Navigator
       initialRouteName="home"
@@ -108,6 +117,26 @@ export function AppRoutes() {
         }}
       />
       <Screen
+        name="addButton"
+        component={Home}
+        options={{
+          tabBarLabel: "addButton",
+          tabBarIcon: ({color}) => (
+            <AddModal visible={isModalVisible} color={color}/>
+          ),
+        }}
+      />
+        <Screen
+          name="peopleCare"
+          component={PeopleCare}
+          options={{
+            tabBarLabel: "peopleCare",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="account-heart" color={color} size={size} />
+            ),
+          }}
+        />
+      <Screen
         name="settings"
         component={Settings}
         options={{
@@ -125,11 +154,6 @@ export function AppRoutes() {
       <Screen
         name="dailyReport"
         component={DailyReport}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="peopleCare"
-        component={PeopleCare}
         options={{ tabBarButton: () => null }}
       />
       <Screen

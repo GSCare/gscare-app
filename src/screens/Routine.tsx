@@ -32,7 +32,12 @@ export function Routine() {
         </View>
         <StatusCardDanger />
         <StatusCardRoutine />
+        <View className="m-5">
         <CardQuestions/>
+        <CardQuestions/>
+        <CardQuestions/>
+        <CardQuestions/>
+        </View>
       </ScrollView>
     </View>
   );

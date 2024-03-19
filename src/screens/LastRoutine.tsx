@@ -13,7 +13,7 @@ import { StatusCardRoutine } from "@components/StatusCardRoutine";
 import { StatusCardDanger } from "@components/StatusCardDanger";
 
 interface IProps {
-  date: string
+  date?: string
 }
 export function LastRoutine({ date }: IProps) {
   date = "20/04/2005"

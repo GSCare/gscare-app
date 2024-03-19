@@ -1,6 +1,8 @@
 import { HomeHeader } from "@components/HomeHeader";
 import { HomePage } from "@components/HomePage";
-import { View } from "react-native";
+import { AddModal } from "@components/ModalAddHome";
+import { useState } from "react";
+import { Button, View } from "react-native";
 
 export function Home() {
   return (
