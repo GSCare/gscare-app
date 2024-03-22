@@ -6,8 +6,8 @@ interface Props {
 
 export function PageHeader({ title }: Props) {
   return (
-    <View className="bg-blue-500 pt-11 pb-5 items-center flex-row justify-center">
-      <Text className="text-gray-100 text-lg">
+    <View className="bg-[#f7fafc] pt-11 pb-5 items-center flex-row justify-center">
+      <Text className="text-orange-500 text-lg font-bold">
         {title}
       </Text>
     </View>

@@ -84,10 +84,10 @@ export function AppRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "#ffffff",
+        tabBarActiveTintColor: "#1C13E9",
         tabBarInactiveTintColor: "#75c3ff",
         tabBarStyle: {
-          backgroundColor: "#3282f9",
+          backgroundColor: "#f7fafc",
           borderTopWidth: 0,
           height: Platform.OS === "android" ? 55 : 96,
           paddingBottom: 10,
