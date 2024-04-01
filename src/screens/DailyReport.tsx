@@ -11,8 +11,6 @@ export function DailyReport() {
   return (
     <View className='flex-1 flex-col'>
       <PageHeader title='relatório diário' />
-      <DescPageHeader title="Relatório diário" />
-
       <View className="justify-between px-10">
         <View className="bg=blue-100 p-12 rounded-lg items-center">
           <View className="justify-center items-center">

@@ -24,7 +24,6 @@ const ShoppingList: React.FC = () => {
 
     <View className="flex-1">
       <PageHeader title="Lista de Compras" />
-      <DescPageHeader title="Crie a lista de compras do paciente" />
       <View className="mt-10 p-4">
         <TextInput
           value={item}

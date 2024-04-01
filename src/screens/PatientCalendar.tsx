@@ -21,34 +21,39 @@ export function PatientCalendar() {
     <View className="flex-col flex-1">
       <PageHeader title='Agenda de trabalho' />
 
-      <DescPageHeader title="Pacientes da semana" />
-
-      <View className="flex-col justify-around px-10">
+      <View className="flex-col px-10">
         <TodaysPatientInfo />
         <View className="flex-col">
           <Text className="pl-1 text-orange-400"> Próximos 6 dias: </Text>
-          <ScrollView className="h-56" showsVerticalScrollIndicator={false}>
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-          </ScrollView>
+          <View className="h-[400px]">
+            <ScrollView className="h-full" showsVerticalScrollIndicator={false}>
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+              <NextDayOfServiceAndPatient />
+            </ScrollView>
+          </View>
         </View>
 
 
         <View className="flex-col mt-12 mb-9">
-          <ButtonComp
-            title="Definir Agenda de Atendimento"
-          />
-
-          <View className="flex: 1; justifyContent: center; alignItems: center">
-            <TouchableOpacity onPress={() => setShowModal(true)}>
-              <Text className="text-blue-500">Open Modal</Text>
-            </TouchableOpacity>
-          </View>
-
+          <TouchableOpacity onPress={() => setShowModal(true)}>
+            <ButtonComp
+              title="Definir Agenda de Atendimento"
+            />
+          </TouchableOpacity>
           {/* Modal */}
         </View>
       </View>
@@ -60,27 +65,27 @@ export function PatientCalendar() {
           onRequestClose={() => setShowModal(false)}
         >
           <TouchableWithoutFeedback onPress={handleBackgroundPress}>
-            <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+            <View className="flex flex-col justify-center items-center h-full bg-indigo-600 bg-opacity-50">
               <TouchableWithoutFeedback onPress={handleModalPress}>
-                <View style={{ backgroundColor: "white", padding: 20, borderRadius: 8, width: 300 }}>
-                  <Text style={{ fontSize: 18, fontWeight: "bold", marginBottom: 10 }}>Contact Us</Text>
+                <View className="bg-white p-6 rounded-lg w-11/12 md:w-3/4 lg:w-1/2">
+                  <Text className="text-lg font-bold mb-4">Contact Us</Text>
 
-                  <View style={{ marginBottom: 10 }}>
-                    <Text style={{ fontSize: 16 }}>Name</Text>
-                    <TextInput style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 4, padding: 8 }} />
+                  <View className="mb-4">
+                    <Text className="text-lg">Name</Text>
+                    <TextInput className="border border-gray-300 rounded p-2" />
                   </View>
 
-                  <View style={{ marginBottom: 10 }}>
-                    <Text style={{ fontSize: 16 }}>Email</Text>
-                    <TextInput style={{ borderWidth: 1, borderColor: "#ccc", borderRadius: 4, padding: 8 }} />
+                  <View className="mb-4">
+                    <Text className="text-lg">Email</Text>
+                    <TextInput className="border border-gray-300 rounded p-2" />
                   </View>
 
-                  <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+                  <View className="flex justify-end">
                     <TouchableOpacity onPress={() => setShowModal(false)}>
-                      <Text style={{ color: "blue" }}>Cancel</Text>
+                      <Text className="text-blue-500 mr-4">Cancel</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => setShowModal(false)}>
-                      <Text style={{ color: "blue" }}>Save</Text>
+                      <Text className="text-blue-500">Save</Text>
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -88,6 +93,8 @@ export function PatientCalendar() {
             </View>
           </TouchableWithoutFeedback>
         </Modal>
+
+
       )}
     </View>
   )

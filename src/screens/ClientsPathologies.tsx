@@ -13,8 +13,6 @@ export function ClientsPathologies() {
     <View className="flex-1 flex-col">
       <PageHeader title='Patologias do cliente' />
 
-      <DescPageHeader title="Nome pacientes da semana" />
-
       <View className="justify-around flex-1 py-6 ">
         <View className="flex-1 flex-col px-10 justify-between ">
           <View className="flex-col space-x-0 space-y-0 w-50 h-20 py-3">

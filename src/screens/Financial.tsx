@@ -13,7 +13,6 @@ export function Financial() {
 
     <View className="flex-1 flex-col">
       <PageHeader title='Financeiro' />
-      <DescPageHeader title="Financial Care" />
       <FinancialCards />
       <View className="flex-row">
         <FilterFinancialData />

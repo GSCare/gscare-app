@@ -10,9 +10,6 @@ export function MedicationSchedules() {
   return (
     <View className="flex-1 flex-col">
       <PageHeader title='Horários da medicação' />
-
-      <DescPageHeader title="Nome pacientes da semana" />
-
       <View className="flex-1 flex-col justify-start px-10">
         <View className="flex-1 flex-col py-6">
           <Text className="pl-1 text-lg text-orange-400"> Lista de medicamentos: </Text>

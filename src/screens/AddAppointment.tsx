@@ -27,7 +27,7 @@ export function AddAppointmentScreen() {
   return (
     <View className='flex-1 flex-col'>
       <PageHeader title='Adicionar Intercorrência' />
-      <DescPageHeader title="Selecione o motivo da intercorrência" />
+
       <View className='p-4'>
         <Text className='text-base mb-1 font-bold'>Categoria:</Text>
         <View className='border border-gray-300 p-2 rounded'>

@@ -11,7 +11,7 @@ export function TodaysPatientInfo() {
         {/* <Heading py={2} mb={1} color="blue.400" fontWeight="bold" fontSize="lg" fontFamily="heading">
           Hoje: 01/12
         </Heading> */}
-        <View className="bg-blue-100 p-2 rounded-lg flex-row">
+        <View className="bg-[#f7fafc] p-2 rounded-lg flex-row">
           <View className='w-20 h-20 my-auto mr-2'>
             <UserPhoto
               sourceUrl={'https://github.com/luisfelipeprs.png'}
@@ -19,13 +19,13 @@ export function TodaysPatientInfo() {
             />
           </View>
           <View className="justify-evenly py-2 ml-4 max-w-lg">
-            <Text className="text-blue-400 font-bold text-sm">
+            <Text className="text-gray-500 font-bold text-sm">
               Hoje: 01/02
             </Text>
             <Text className="text-orange-400 font-bold text-lg">
               Sr. Jose sobrenome fns
             </Text>
-            <Text className="text-blue-400 text-md">
+            <Text className="text-gray-500 text-md">
               Rua duque joao, bairro aqui, n302. logo na frente do banco dsadasds
             </Text>
           </View>

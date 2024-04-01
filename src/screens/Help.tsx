@@ -22,7 +22,6 @@ const HelpScreen = () => {
   return (
     <View className='flex-1 flex-col'>
       <PageHeader title='Me ajuda' />
-      <DescPageHeader title="Selecione o contato desejado" />
       <View className='p-4 my-5'>
         <ScrollView>
           <Text className='text-xl font-semibold mb-4'>Me Ajuda</Text>

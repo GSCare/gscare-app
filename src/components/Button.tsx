@@ -15,12 +15,12 @@ export function Button({ title, variant = "solid", ...rest }: Props) {
   };
 
   return (
-    <TouchableOpacity
+    <View
       className={`
         w-full
         b-1
         h-14
-        bg-yellow-600
+        bg-blue-500
         border-0
         
         
@@ -44,6 +44,6 @@ export function Button({ title, variant = "solid", ...rest }: Props) {
       >
         {title}
       </Text>
-    </TouchableOpacity>
+    </View>
   );
 }

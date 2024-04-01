@@ -36,7 +36,7 @@ export function AddIntercurrence() {
   return (
     <View className='flex-1 flex-col'>
       <PageHeader title='Adicionar Intercorrência' />
-      <DescPageHeader title="Selecione o motivo da intercorrência" />
+
       <View className='my-5'>
         <FlatList
           data={intercorrencias}
