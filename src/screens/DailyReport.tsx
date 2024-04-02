@@ -4,52 +4,42 @@ import { PageHeader } from "@components/PageHeader";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { useState } from "react";
 import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatient";
+import Days from "@components/DayCard";
+import PatientCardReport from "@components/CardPatientReport";
 
 export function DailyReport() {
   const [reportSent, setReportSent] = useState(false);
-
+  const [selectedPatient, setSelectedPatient] = useState<string | null>(null);
+  const patients = [
+    { patientName: 'Luis Felipe', appointmentTimeStart: '08:00', appointmentTimeEnd: '09:30', appointmentDate: '22 Março' },
+    { patientName: 'Ta Rocheda', appointmentTimeStart: '09:00', appointmentTimeEnd: '10:30', appointmentDate: '15 Março' },
+    { patientName: 'Neymar JR', appointmentTimeStart: '08:00', appointmentTimeEnd: '09:30', appointmentDate: '10 Março' },
+    { patientName: 'KaKa', appointmentTimeStart: '09:00', appointmentTimeEnd: '10:30', appointmentDate: '7 Março' },
+    { patientName: 'Mano Brown', appointmentTimeStart: '08:00', appointmentTimeEnd: '09:30', appointmentDate: '7 Março' },
+    { patientName: 'John Doe', appointmentTimeStart: '09:00', appointmentTimeEnd: '10:30', appointmentDate: '3 Março' },
+  ];
   return (
     <View className='flex-1 flex-col'>
       <PageHeader title='relatório diário' />
-      <View className="justify-between px-10">
-        <View className="bg=blue-100 p-12 rounded-lg items-center">
-          <View className="justify-center items-center">
-            {
-              reportSent
-                ?
-                <MaterialIcons className='' name="event-available" size={70} color='green' />
-                :
-                <MaterialIcons className='mt-10' name="event-busy" size={70} color='red' />
-            }
-            {/* <Text color={reportSent ? "green.400" : "red.400"} px={2}>Relatório diário</Text> */}
-            <Text className="text-red-400 px-2">Relatório diário</Text>
-            <Text className="text-red-400 px-2">{reportSent ? " enviado" : " pendente"}</Text>
-          </View>
-        </View>
-
-        <View>
-          <Text className="text-orange-400 pl-1"> últimos 3 dias: </Text>
-          <ScrollView className="h-56" showsVerticalScrollIndicator={false}>
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            {/* ontem - anteontem - antes de ontem */}
-            {/* <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient />
-            <NextDayOfServiceAndPatient /> */}
-          </ScrollView>
+      <View className="p-12 rounded-lg items-center">
+        <View className="justify-center items-center">
+          <Days />
         </View>
       </View>
-
-      <View className="absolute bottom-4 right-4">
-        <TouchableOpacity onPress={() => {
-          // TODO: abrir o formulário
-        }}>
-          <View className="bg-orange-300 rounded-full p-2">
-            <MaterialIcons name="add" size={25} m={2} color='white' />
-          </View>
-        </TouchableOpacity>
+      <View className="mx-4">
+        <Text className="font-bold text-xl pl-1 mb-4 text-gray-600">Pacientes do mês</Text>
+        <ScrollView className="h-[480px] w-full" showsVerticalScrollIndicator={false}>
+          {patients.map((patient, index) => (
+            <PatientCardReport
+              key={index}
+              {...patient}
+              isSelected={patient.patientName === selectedPatient}
+              onSelect={() => setSelectedPatient(prevPatient => prevPatient === patient.patientName ? null : patient.patientName)}
+            />
+          ))}
+        </ScrollView>
       </View>
     </View>
+
   )
 }

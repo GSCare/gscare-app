@@ -13,7 +13,6 @@ export function PeopleCare() {
         <View className="p-4">
           <SearchInput />
         </View>
-
         <ScrollView showsVerticalScrollIndicator={true} className="h-3/4">
           <View className="mb-10">
             <View className="m-3">
