@@ -33,6 +33,7 @@ import { ShiftHistory } from "@screens/ShiftHistory";
 import ShoppingList from "@screens/ShoppingList";
 import { useState } from "react";
 import { AddModal } from "@components/ModalAddHome";
+import ProfilePaciente from "@screens/ProfilePaciente";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -65,6 +66,7 @@ export type AppRoutes = {
   shiftHistory: undefined;
   shoppingList: undefined;
   addButton: undefined;
+  profilePaciente: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -121,21 +123,21 @@ export function AppRoutes() {
         component={Home}
         options={{
           tabBarLabel: "addButton",
-          tabBarIcon: ({color}) => (
-            <AddModal visible={isModalVisible} color={color}/>
+          tabBarIcon: ({ color }) => (
+            <AddModal visible={isModalVisible} color={color} />
           ),
         }}
       />
-        <Screen
-          name="peopleCare"
-          component={PeopleCare}
-          options={{
-            tabBarLabel: "peopleCare",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="account-heart" color={color} size={size} />
-            ),
-          }}
-        />
+      <Screen
+        name="peopleCare"
+        component={PeopleCare}
+        options={{
+          tabBarLabel: "peopleCare",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account-heart" color={color} size={size} />
+          ),
+        }}
+      />
       <Screen
         name="settings"
         component={Settings}
@@ -244,6 +246,11 @@ export function AppRoutes() {
       <Screen
         name="shoppingList"
         component={ShoppingList}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="profilePaciente"
+        component={ProfilePaciente}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>
