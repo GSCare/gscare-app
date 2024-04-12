@@ -15,8 +15,7 @@ export function TodaysPatientInfo() {
           <View className='w-20 h-20 my-auto mr-2'>
             <UserPhoto
               sourceUrl={'https://github.com/luisfelipeprs.png'}
-              altDescription="Imagem do usuário ou empresa"
-            />
+              altDescription="Imagem do usuário ou empresa"/>
           </View>
           <View className="justify-evenly py-2 ml-4 max-w-lg">
             <Text className="text-gray-500 font-bold text-sm">

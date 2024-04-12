@@ -18,11 +18,11 @@ export function UserIcon({ url, name }: UserIconProps) {
       {url && imageLoaded ? (
         <Image
           source={{ uri: url }}
-          className='w-12 h-12 rounded-full'
+          className='w-full h-full rounded-full'
           onError={() => setImageLoaded(false)}
         />
       ) : (
-        <View className='w-12 h-12 rounded-full bg-indigo-600 justify-center items-center'>
+        <View className='w-full h-full rounded-full bg-indigo-600 justify-center items-center'>
           <Text className='text-white text-xl'>
             {getInitials(name)}
           </Text>

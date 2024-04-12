@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { UserIcon } from './UserIcon';
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigatorRoutesProps } from '@routes/app.routes';
 
 
 interface IProps {
@@ -13,6 +15,11 @@ interface IProps {
 }
 
 export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IProps) => {
+  const navigation = useNavigation<AppNavigatorRoutesProps>()
+  function handleComponent() {
+    navigation.navigate('dailyAppointments')
+  }
+  // dailyAppointments
   // Função para renderizar as estrelas cheias e vazias baseadas na classificação
   const renderStars = () => {
     let stars = [];
@@ -43,7 +50,7 @@ export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IPr
         </View>
       </View>
       <TouchableOpacity className="bg-green-500 px-4 py-2 rounded-2xl w-20 items-center">
-        <Text className="text-white font-bold">Chat</Text>
+        <Text className="text-white font-bold" onPress={handleComponent}>Ver</Text>
       </TouchableOpacity>
     </View>
   );

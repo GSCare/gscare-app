@@ -6,6 +6,7 @@ import { NextDayOfServiceAndPatient } from "@components/NextDayOfServiceAndPatie
 import { PageHeader } from "@components/PageHeader";
 import { DescPageHeader } from "@components/DescPageHeader";
 import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback } from "react-native";
+import UserCard from "@components/UserCard";
 
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
@@ -22,32 +23,25 @@ export function PatientCalendar() {
       <PageHeader title='Agenda de trabalho' />
 
       <View className="flex-col px-10">
+
         <TodaysPatientInfo />
+
         <View className="flex-col">
-          <Text className="pl-1 text-orange-400"> Próximos 6 dias: </Text>
-          <View className="h-[400px]">
+          <Text className="pl-1 text-gray-400 font-bold"> Próximos 6 dias: </Text>
+          <View className="h-[400px] mt-4">
             <ScrollView className="h-full" showsVerticalScrollIndicator={false}>
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
-              <NextDayOfServiceAndPatient />
+              <View className="mb-5 h-52">
+                <UserCard />
+              </View>
+              <View className="mb-5 h-52">
+                <UserCard />
+              </View>
+              <View className="mb-5 h-52">
+                <UserCard />
+              </View>
             </ScrollView>
           </View>
         </View>
-
-
         <View className="flex-col mt-12 mb-9">
           <TouchableOpacity onPress={() => setShowModal(true)}>
             <ButtonComp

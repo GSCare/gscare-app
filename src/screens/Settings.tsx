@@ -1,81 +1,50 @@
-import { useState } from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { PageHeader } from '@components/PageHeader';
+import { UserIcon } from '@components/UserIcon';
+import React from 'react';
+import { View, Text, Switch } from 'react-native';
 
-import { HomeHeader } from "@components/HomeHeader";
-import { UserPhoto } from "@components/UserPhoto";
-import { Input } from '@components/Input'
-import { Button } from "@components/Button";
-import { PageHeader } from "@components/PageHeader";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const PHOTO_SIZE = 33;
+import { MaterialIcons } from '@expo/vector-icons';
 
-export function Settings() {
-  const [photoIsLoading, setPhotoIsLoading] = useState(false);
+export const Settings = () => {
 
   return (
-    <View className="flex-1 flex-col">
-      <PageHeader title='Perfil' />
-      <ScrollView>
-
-        <View className="mt-6 px-10 justify-center items-center">
-
-          <View className="h-20 w-20">
-            <UserPhoto
-              sourceUrl={'https://github.com/luisfelipeprs.png'}
-              altDescription="Imagem do usuário ou empresa"
-            />
+    <View>
+      <PageHeader title="Settings" />
+      <View>
+        <View className='flex-col items-center mt-6'>
+          <View className='h-14 w-14'>
+            <UserIcon name='Tim Maia' />
           </View>
-          <TouchableOpacity>
-            <Text className="text-orange-400 font-bold text-lg mt-2 mb-8">
-              Alterar foto
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View className="px-10 mb-9 flex-col">
-          <View className="w-50 h-20 py-3">
-            <Input
-              value=""
-              placeholder="Nome"
-            />
-          </View>
-          <View className="w-50 h-20 py-3">
-            <Input
-              value=""
-              placeholder="conta@email.com"
-            // isDisabled
-            />
+          <View>
+            <Text className='ml-4 font-bold m-auto text-base'>Tim Maia</Text>
           </View>
         </View>
-        <View className="px-10 mb-9 flex-col">
-          <Text className='text-orange-300 text-lg mb-2'>
-            Alterar senha
-          </Text>
-          <View className="w-50 h-20 py-3">
-            <Input
-              value=""
-              placeholder="Senha antiga"
-              secureTextEntry
-            />
+        <View className='mt-4 p-4'>
+          <Text className='font-bold mb-4'>PROFILE</Text>
+          <View className='flex-col'>
+            <View className='flex-row items-center gap-1'>
+              <MaterialCommunityIcons name="account-outline" size={26} color="blue" />
+              <Text className='flex-grow'>Account details</Text>
+              <MaterialIcons name="arrow-forward-ios" size={15} color="gray" />
+            </View>
+            <View className='border-b-[1px] border-gray-300 my-4' />
           </View>
-          <View className="w-50 h-20 py-3">
-            <Input
-              value=""
-              placeholder="Nova senha"
-              secureTextEntry
-            />
+          <View className='flex-col'>
+            <View className='flex-row items-center gap-1'>
+              <MaterialCommunityIcons name="account-outline" size={26} color="blue" />
+              <Text className='flex-grow'>Documents</Text>
+              <MaterialIcons name="arrow-forward-ios" size={15} color="gray" />
+            </View>
+            <View className='border-b-[1px] border-gray-300 my-4' />
           </View>
-          <View className="w-50 h-20 py-3">
-            <Input
-              value=""
-              placeholder="Confirme a nova senha"
-              secureTextEntry
-            />
+          <View className='flex-row justify-between items-center'>
+            <Text>Turn your location</Text>
+            <Switch />
           </View>
-          <Button
-            title="Atualizar"
-          />
         </View>
-      </ScrollView>
+      </View>
     </View>
-  )
-}
+  );
+};
