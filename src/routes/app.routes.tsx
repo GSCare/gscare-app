@@ -34,6 +34,8 @@ import ShoppingList from "@screens/ShoppingList";
 import { useState } from "react";
 import { AddModal } from "@components/ModalAddHome";
 import ProfilePaciente from "@screens/ProfilePaciente";
+import { CardProfileEmployee } from "@components/CardProfileEmployee";
+import { ProfileEmployee } from "@screens/ProfileEmployee";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -67,6 +69,7 @@ export type AppRoutes = {
   shoppingList: undefined;
   addButton: undefined;
   profilePaciente: undefined;
+  profileEmployee: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -251,6 +254,11 @@ export function AppRoutes() {
       <Screen
         name="profilePaciente"
         component={ProfilePaciente}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="profileEmployee"
+        component={ProfileEmployee}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>

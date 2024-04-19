@@ -21,13 +21,19 @@ export function ScrollingEmployeeHorizontalHome() {
       showsVerticalScrollIndicator={false}
     >
       <View className="flex-row flex-1 rounded-2">
-        <HomeButtonOptionTools
+        {/* <HomeButtonOptionTools
           desc="Relatorio diario"
           icon="perm-contact-calendar"
           handleButtonPress={handleButtonPress}
           parametro="dailyReport"
           color="purple"
-
+        /> */}
+        <HomeButtonOptionTools
+          desc="profileEmployee"
+          icon="perm-contact-calendar"
+          handleButtonPress={handleButtonPress}
+          parametro="profileEmployee"
+          color="purple"
         />
         <HomeButtonOptionTools
           desc="Patologias do paciente"

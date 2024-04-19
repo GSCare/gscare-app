@@ -1,8 +1,7 @@
 import { CardPeopleCare } from "@components/CardPeopleCare";
-import { DescPageHeader } from "@components/DescPageHeader";
 import { PageHeader } from "@components/PageHeader";
 import SearchInput from "@components/SearchInput";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 
 export function PeopleCare() {
 

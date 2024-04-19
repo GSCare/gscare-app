@@ -5,6 +5,8 @@ import { CaseCompletion } from './CaseCompletion';
 import { Assentments } from './Assentments';
 import { MessageCard } from './MessageCard';
 import { AddFile } from './AddFile';
+import { Compliments } from './Compliments';
+import { AvaliationCard } from './AvaliationCard';
 
 interface TabProps {
   title: string;
@@ -15,12 +17,14 @@ const tabs: TabProps[] = [
   {
     title: 'Visão Geral',
     content:
-      <View className='flex-col'>
-        <View className='flex-row mt-5 justify-around'>
-          <PercentMedication progress={60} />
-          <CaseCompletion progress={20} />
+      <View>
+        <View className='p-4'>
+          <Compliments />
         </View>
-        <Assentments />
+        <View>
+          <Text className='text-xl font-bold p-4'>Avaliações</Text>
+          <AvaliationCard />
+        </View>
       </View>
   },
   {
@@ -45,13 +49,13 @@ const tabs: TabProps[] = [
   {
     title: 'Tratamento',
     content:
-        <View className='mt-20'>
-          <AddFile />
-        </View>
+      <View className='mt-20'>
+        <AddFile />
+      </View>
   },
 ];
 
-export const TabPatient = () => {
+export const TabEmployee = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
