@@ -7,8 +7,7 @@ export function HomeHeader() {
   return (
     <View className="bg-[#f7fafc] pt-11 pb-5 px-2 flex-row">
       <View className="flex-1">
-        <View className='flex-row gap-2 items-center'>
-          <Entypo name="menu" size={24} color="black" />
+        <View className='flex-row items-center pl-4'>
           <Text className="text-orange-500 font-bold text-base max-w-150 text-nowrap truncate">
             GSCare
           </Text>
