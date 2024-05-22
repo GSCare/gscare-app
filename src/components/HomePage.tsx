@@ -7,7 +7,7 @@ import { HomeButtonOptionTools } from './HomeButtonOptionTools';
 import { Text, View } from 'react-native';
 import { ScrollingEmployeeHorizontalHome } from './ScrollingEmployeeHorizontalHome';
 import CardPatienteHome from './CardPatienteHome';
-import { FeaturePacientHome } from './FeaturePacientHome';
+import { ScrollingPatientHorizontalHome } from './ScrollingPatientHorizontalHome';
 import { HomeButtonPatient } from './HomeButtonPatient';
 
 type NavigationType = NavigationProp<AppRoutes>;
@@ -34,7 +34,7 @@ export function HomePage() {
         <View className=''>
           <Text className='text-lg text-orange-500 font-bold ml-3'>Funcionalidades</Text>
           <View className='items-center'>
-            <FeaturePacientHome />
+            <ScrollingPatientHorizontalHome />
           </View>
         </View>
       </View>

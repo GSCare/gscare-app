@@ -7,7 +7,7 @@ import { AppRoutes } from "@routes/app.routes";
 
 type NavigationType = NavigationProp<AppRoutes>;
 
-export function FeaturePacientHome() {
+export function ScrollingPatientHorizontalHome() {
   const navigation = useNavigation<NavigationType>();
 
   const handleButtonPress = (routeName: keyof AppRoutes) => {
@@ -17,19 +17,13 @@ export function FeaturePacientHome() {
   // a prop de descrição do componente em questão é "desc";
   return (
     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+
       <HomeButtonPatient
-        desc="Relatorio"
+        desc="Agenda de Trabalho"
         icon="perm-contact-calendar"
         handleButtonPress={handleButtonPress}
-        parametro="dailyReport"
+        parametro="patientCalendar"
         color="purple"
-      />
-      <HomeButtonPatient
-        desc="Patologias"
-        icon="perm-contact-calendar"
-        handleButtonPress={handleButtonPress}
-        parametro="clientsPathologies"
-        color="orange"
       />
 
     </View>

@@ -24,9 +24,8 @@ const HelpScreen = () => {
       <PageHeader title='Me ajuda' />
       <View className='p-4 my-5'>
         <ScrollView>
-          <Text className='text-xl font-semibold mb-4'>Me Ajuda</Text>
           {contatos.map((contato, index) => (
-            <View key={index} className='bg-white rounded-lg p-4 shadow-md mb-4 flex-row items-center'>
+            <View key={index} className='bg-white rounded-md p-4 m-4 shadow-md shadow-black mb-4 flex-row items-center'>
               <Icon name='phone' size={20} color='black' style={{ marginRight: 8 }} />
               <View>
                 <Text className='text-lg font-semibold mb-1'>{contato.nome}</Text>

@@ -34,6 +34,8 @@ import { AddModal } from "@components/ModalAddHome";
 import ProfilePaciente from "@screens/ProfilePaciente";
 import { CardProfileEmployee } from "@components/CardProfileEmployee";
 import { ProfileEmployee } from "@screens/ProfileEmployee";
+import { MedicamentosPacienteAtual } from "@screens/MedicamentosPacienteAtual";
+import { Alergias } from "@screens/Alergias";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -68,6 +70,8 @@ export type AppRoutes = {
   addButton: undefined;
   profilePaciente: undefined;
   profileEmployee: undefined;
+  medicamentosPacienteAtual: undefined;
+  alergias: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
@@ -110,6 +114,16 @@ export function AppRoutes() {
         }}
       />
       <Screen
+        name="dailyReport"
+        component={DailyReport}
+        options={{
+          tabBarLabel: "dailyReport",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="calendar" color={color} size={size} />
+          ),
+        }}
+      />
+      {/* <Screen
         name="patientCalendar"
         component={PatientCalendar}
         options={{
@@ -118,7 +132,7 @@ export function AppRoutes() {
             <MaterialCommunityIcons name="calendar" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       <Screen
         name="addButton"
         component={Home}
@@ -149,9 +163,14 @@ export function AppRoutes() {
           ),
         }}
       />
-      <Screen
+      {/* <Screen
         name="dailyReport"
         component={DailyReport}
+        options={{ tabBarButton: () => null }}
+      /> */}
+      <Screen
+        name="patientCalendar"
+        component={PatientCalendar}
         options={{ tabBarButton: () => null }}
       />
       <Screen
@@ -247,6 +266,16 @@ export function AppRoutes() {
       <Screen
         name="profileEmployee"
         component={ProfileEmployee}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="medicamentosPacienteAtual"
+        component={MedicamentosPacienteAtual}
+        options={{ tabBarButton: () => null }}
+      />
+      <Screen
+        name="alergias"
+        component={Alergias}
         options={{ tabBarButton: () => null }}
       />
     </Navigator>
