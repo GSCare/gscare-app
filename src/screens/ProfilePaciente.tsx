@@ -12,7 +12,7 @@ const ProfilePaciente = () => {
       <View className='p-4'>
       <CardProfilePatient />
       </View>
-      <View className='m-3'>
+      <View className='m-3 mt-10 flex-1'>
         <TabPatient />
       </View>
     </View>

@@ -13,13 +13,11 @@ import { ClientsPathologies } from "@screens/ClientsPathologies";
 import { ComplaintsAndNotices } from "@screens/ComplaintsAndNotices";
 import { DailyReport } from "@screens/DailyReport";
 import { EmergencyPhones } from "@screens/EmergencyPhones";
-import { FoodAndMedicineAllergies } from "@screens/FoodAndMedicineAllergies";
 import { ConsultationCalendar } from "@screens/ConsultationCalendar";
 import { PatientsMedicalDocuments } from "@screens/PatientsMedicalDocuments";
 import { Profile } from "@screens/Profile";
 import { Settings } from "@screens/Settings";
 import { SupplyMonitoring } from "@screens/SupplyMonitoring";
-import { MedicationSchedules } from "@screens/MedicationSchedules";
 import { PatientCalendar } from "@screens/PatientCalendar";
 import { Financial } from "@screens/Financial";
 import { DailyAppointments } from "@screens/DailyAppointments";
@@ -152,11 +150,6 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="medicationSchedules"
-        component={MedicationSchedules}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
         name="dailyReport"
         component={DailyReport}
         options={{ tabBarButton: () => null }}
@@ -164,11 +157,6 @@ export function AppRoutes() {
       <Screen
         name="dailyAppointments"
         component={DailyAppointments}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="foodAndMedicineAllergies"
-        component={FoodAndMedicineAllergies}
         options={{ tabBarButton: () => null }}
       />
       <Screen

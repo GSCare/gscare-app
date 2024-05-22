@@ -15,7 +15,6 @@ export function CardProfilePatient() {
             <Text className='text-sm text-gray-300'>20 anos - Belo Horizonte</Text>
           </View>
         </View>
-
       </View>
     </View>
   );

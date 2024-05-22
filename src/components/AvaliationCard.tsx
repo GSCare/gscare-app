@@ -3,8 +3,8 @@ import { View, Text } from 'react-native';
 
 export const AvaliationCard = () => {
   return (
-    <View className="bg-gray-800 p-4 rounded-lg shadow-md m-4">
-      <Text className="text-white text-lg my-4">
+    <View className="bg-white p-4 rounded-lg shadow-md shadow-black m-4">
+      <Text className="text-black text-lg my-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Text>
       <View className="flex-row items-center mt-2">

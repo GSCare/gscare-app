@@ -24,7 +24,7 @@ export function CardProfileEmployee({ rating }: IProps) {
     return stars;
   };
   return (
-    <View className='bg-white p-4 rounded-lg shadow-md'>
+    <View className='bg-white p-4 rounded-lg shadow-lg shadow-black'>
       <View className='flex-row items-center gap-2'>
         <View className='w-16 h-16'>
           <UserIcon name='Luís Felipe' />

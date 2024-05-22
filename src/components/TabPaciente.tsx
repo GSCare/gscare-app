@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { PercentMedication } from './PercentMedication';
 import { CaseCompletion } from './CaseCompletion';
 import { Assentments } from './Assentments';
 import { MessageCard } from './MessageCard';
 import { AddFile } from './AddFile';
+import { ListItem } from './ListItem';
+import PlantaoCard from './PlantaoCard';
 
 interface TabProps {
   title: string;
@@ -26,10 +28,22 @@ const tabs: TabProps[] = [
   {
     title: 'Histórico',
     content:
-      <Text>Conteúdo do Histórico</Text>
+      <ScrollView showsVerticalScrollIndicator={true} className="h-5/6 mt-5">
+        <View className='p-4'>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+        </View>
+      </ScrollView>
   },
   {
-    title: 'Diagnóstico',
+    title: 'Patologia',
     content:
       <View>
         <MessageCard title='Ansiedade - GAD 7'
@@ -43,11 +57,15 @@ const tabs: TabProps[] = [
       </View>
   },
   {
-    title: 'Tratamento',
+    title: 'Tratamentos',
     content:
-        <View className='mt-20'>
-          <AddFile />
-        </View>
+      <View className='mt-5 p-4'>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <ListItem />
+          <ListItem />
+          <ListItem />
+        </ScrollView>
+      </View>
   },
 ];
 

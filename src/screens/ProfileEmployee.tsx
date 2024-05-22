@@ -15,7 +15,7 @@ export const ProfileEmployee = () => {
         <CardProfileEmployee rating={5} />
       </View>
       <View className='p-4'>
-        <Text className='text-gray-500'>Profissional de home care com 10 anos de experiência, dedicado ao cuidado compassivo e de alta qualidade aos pacientes.</Text>
+        <Text className='text-gray-500 font-medium'>Profissional de home care com 10 anos de experiência, dedicado ao cuidado compassivo e de alta qualidade aos pacientes.</Text>
       </View>
       <View className='m-3'>
         <TabEmployee />

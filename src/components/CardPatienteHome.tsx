@@ -1,22 +1,29 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons, FontAwesome5, AntDesign } from '@expo/vector-icons';
 import { UserPhoto } from './UserPhoto';
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigatorRoutesProps } from '@routes/app.routes';
 
 const CardPatienteHome = () => {
+  const navigation = useNavigation<AppNavigatorRoutesProps>() 
+  const handleComponent = () =>{
+    navigation.navigate('profilePaciente')
+  }
   return (
     <View className='bg-[#6A39F1] rounded-xl shadow-2xl shadow-black p-4 mt-10 w-96'>
-
       <View className='flex-col'>
         <View className='flex-row items-center'>
-          <View className='w-12 h-12'>
-            <UserPhoto altDescription='Foto Paciente' sourceUrl='https://github.com/luisfelipeprs.png' />
-          </View>
+          <TouchableOpacity onPress={handleComponent}>
+            <View className='w-12 h-12'>
+              <UserPhoto altDescription='Foto Paciente' sourceUrl='https://github.com/luisfelipeprs.png' />
+            </View>
+          </TouchableOpacity>
           <View>
             <Text className='ml-2 text-white font-bold'>Luís Felipe Silva</Text>
             <View className='flex-row border-[1px] border-white rounded-full items-center w-11 p-[2px] mt-2 ml-2'>
-            <AntDesign name="star" size={12} color="yellow" />
-            <Text className='text-white text-xs font-bold ml-1'>4.8</Text>
+              <AntDesign name="star" size={12} color="yellow" />
+              <Text className='text-white text-xs font-bold ml-1'>4.8</Text>
             </View>
           </View>
         </View>

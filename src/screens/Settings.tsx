@@ -1,14 +1,19 @@
 import { PageHeader } from '@components/PageHeader';
 import { UserIcon } from '@components/UserIcon';
 import React from 'react';
-import { View, Text, Switch } from 'react-native';
+import { View, Text, Switch, TouchableOpacity } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { MaterialIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigatorRoutesProps } from '@routes/app.routes';
 
 export const Settings = () => {
-
+  const navigation = useNavigation<AppNavigatorRoutesProps>()
+  const handleComponent = () => {
+    navigation.navigate('profileEmployee')
+  }
   return (
     <View>
       <PageHeader title="Settings" />
@@ -23,22 +28,22 @@ export const Settings = () => {
         </View>
         <View className='mt-4 p-4'>
           <Text className='font-bold mb-4'>PROFILE</Text>
-          <View className='flex-col'>
+          <TouchableOpacity className='flex-col' onPress={handleComponent}>
             <View className='flex-row items-center gap-1'>
               <MaterialCommunityIcons name="account-outline" size={26} color="blue" />
               <Text className='flex-grow'>Account details</Text>
               <MaterialIcons name="arrow-forward-ios" size={15} color="gray" />
             </View>
+          </TouchableOpacity>
             <View className='border-b-[1px] border-gray-300 my-4' />
-          </View>
-          <View className='flex-col'>
+          {/* <View className='flex-col'>
             <View className='flex-row items-center gap-1'>
               <MaterialCommunityIcons name="account-outline" size={26} color="blue" />
               <Text className='flex-grow'>Documents</Text>
               <MaterialIcons name="arrow-forward-ios" size={15} color="gray" />
             </View>
             <View className='border-b-[1px] border-gray-300 my-4' />
-          </View>
+          </View> */}
           <View className='flex-row justify-between items-center'>
             <Text>Turn your location</Text>
             <Switch />

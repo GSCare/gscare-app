@@ -16,8 +16,11 @@ interface IProps {
 
 export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IProps) => {
   const navigation = useNavigation<AppNavigatorRoutesProps>()
-  function handleComponent() {
+  function handleComponentDailyAppointments() {
     navigation.navigate('dailyAppointments')
+  }
+  function handleComponentProfilePatient() {
+    navigation.navigate('profilePaciente')
   }
   // dailyAppointments
   // Função para renderizar as estrelas cheias e vazias baseadas na classificação
@@ -38,9 +41,9 @@ export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IPr
 
   return (
     <View className="bg-[#f7fafc] p-4 rounded-3xl shadow-md flex-row items-center justify-between">
-      <View className="w-14 h-14">
+      <TouchableOpacity className="w-14 h-14" onPress={handleComponentProfilePatient}>
         <UserIcon url={url} name={name} />
-      </View>
+      </TouchableOpacity>
       <View className="flex-1 ml-4">
         <Text className="text-lg font-bold">{name}</Text>
         <Text>{specialty}</Text>
@@ -50,7 +53,7 @@ export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IPr
         </View>
       </View>
       <TouchableOpacity className="bg-green-500 px-4 py-2 rounded-2xl w-20 items-center">
-        <Text className="text-white font-bold" onPress={handleComponent}>Ver</Text>
+        <Text className="text-white font-bold" onPress={handleComponentDailyAppointments}>Ver</Text>
       </TouchableOpacity>
     </View>
   );

@@ -31,20 +31,7 @@ export function FeaturePacientHome() {
         parametro="clientsPathologies"
         color="orange"
       />
-      <HomeButtonPatient
-        desc="Remédios"
-        icon="timer"
-        handleButtonPress={handleButtonPress}
-        parametro="medicationSchedules"
-        color="green"
-      />
-      <HomeButtonPatient
-        desc="Alergias"
-        icon="inventory"
-        handleButtonPress={handleButtonPress}
-        parametro="foodAndMedicineAllergies"
-        color="purple"
-      />
+
     </View>
   );
 }

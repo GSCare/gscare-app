@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { PercentMedication } from './PercentMedication';
 import { CaseCompletion } from './CaseCompletion';
 import { Assentments } from './Assentments';
@@ -7,6 +7,7 @@ import { MessageCard } from './MessageCard';
 import { AddFile } from './AddFile';
 import { Compliments } from './Compliments';
 import { AvaliationCard } from './AvaliationCard';
+import PlantaoCard from './PlantaoCard';
 
 interface TabProps {
   title: string;
@@ -30,7 +31,19 @@ const tabs: TabProps[] = [
   {
     title: 'Histórico',
     content:
-      <Text>Conteúdo do Histórico</Text>
+      <ScrollView showsVerticalScrollIndicator={true} className="h-3/4">
+        <View className='p-4'>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+          <View className='mb-5'>
+            <PlantaoCard status="Concluído" shift={24} start="15/02/2024" end="16/02/2024" />
+          </View>
+        </View>
+      </ScrollView>
   },
   {
     title: 'Diagnóstico',
@@ -47,7 +60,7 @@ const tabs: TabProps[] = [
       </View>
   },
   {
-    title: 'Tratamento',
+    title: 'Dados',
     content:
       <View className='mt-20'>
         <AddFile />
