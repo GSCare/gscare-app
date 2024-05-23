@@ -8,16 +8,11 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { MaterialIcons } from '@expo/vector-icons';
 
 import { Home } from "@screens/Home";
-import { AttendanceCalendar } from "@screens/AttendanceCalendar";
 import { ClientsPathologies } from "@screens/ClientsPathologies";
-import { ComplaintsAndNotices } from "@screens/ComplaintsAndNotices";
 import { DailyReport } from "@screens/DailyReport";
-import { EmergencyPhones } from "@screens/EmergencyPhones";
-import { ConsultationCalendar } from "@screens/ConsultationCalendar";
-import { PatientsMedicalDocuments } from "@screens/PatientsMedicalDocuments";
-import { Profile } from "@screens/Profile";
+
 import { Settings } from "@screens/Settings";
-import { SupplyMonitoring } from "@screens/SupplyMonitoring";
+
 import { PatientCalendar } from "@screens/PatientCalendar";
 import { Financial } from "@screens/Financial";
 import { DailyAppointments } from "@screens/DailyAppointments";
@@ -44,22 +39,14 @@ export type AppRoutes = {
   settings: undefined;
 
   // ? rotas que ficaram nas divs da home
-  attendanceCalendar: undefined;
   clientsPathologies: undefined;
   dailyReport: undefined;
   dailyAppointments: undefined;
   peopleCare: undefined;
-  emergencyPhones: undefined;
-  supplyMonitoring: undefined;
-  medicationSchedules: undefined;
-  consultationCalendar: undefined;
+
   financial: undefined;
 
   // ! essas rotas abaixo só seram usadas na segunda versao
-  patientsMedicalDocuments: undefined;
-  foodAndMedicineAllergies: undefined;
-  complaintsAndNotices: undefined;
-  profile: undefined;
   routine: undefined;
   lastRoutine: undefined;
   addIntercurrence: undefined;
@@ -179,16 +166,6 @@ export function AppRoutes() {
         options={{ tabBarButton: () => null }}
       />
       <Screen
-        name="consultationCalendar"
-        component={ConsultationCalendar}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="attendanceCalendar"
-        component={AttendanceCalendar}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
         name="clientsPathologies"
         component={ClientsPathologies}
         options={{ tabBarButton: () => null }}
@@ -198,31 +175,7 @@ export function AppRoutes() {
         component={Financial}
         options={{ tabBarButton: () => null }}
       />
-      <Screen
-        name="complaintsAndNotices"
-        component={ComplaintsAndNotices}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="emergencyPhones"
-        component={EmergencyPhones}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="patientsMedicalDocuments"
-        component={PatientsMedicalDocuments}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="profile"
-        component={Profile}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="supplyMonitoring"
-        component={SupplyMonitoring}
-        options={{ tabBarButton: () => null }}
-      />
+
       <Screen
         name="routine"
         component={Routine}

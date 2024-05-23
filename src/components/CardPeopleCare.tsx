@@ -52,8 +52,8 @@ export const CardPeopleCare = ({ url, name, specialty, experience, rating }: IPr
           {renderStars()}
         </View>
       </View>
-      <TouchableOpacity className="bg-green-500 px-4 py-2 rounded-2xl w-20 items-center">
-        <Text className="text-white font-bold" onPress={handleComponentDailyAppointments}>Ver</Text>
+      <TouchableOpacity className="bg-green-500 px-4 py-2 rounded-2xl w-20 items-center" onPress={handleComponentDailyAppointments}>
+        <Text className="text-white font-bold">Ver</Text>
       </TouchableOpacity>
     </View>
   );
