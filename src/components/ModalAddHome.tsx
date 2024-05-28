@@ -7,12 +7,12 @@ import { AppNavigatorRoutesProps } from '@routes/app.routes';
 export const AddModal = ({ visible, onClose, color }: any) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const items = ['Adicionar Intercorrência', 'Adicionar Compromisso']; // Adicione seus componentes aqui
+  const items = ['Adicionar Intercorrência', 'Adicionar Atividade'];
   const navigation = useNavigation<AppNavigatorRoutesProps>()
 
   function handleComponent() {
     if(selectedItem=="Adicionar Intercorrência")navigation.navigate('addIntercurrence')
-    if(selectedItem=="Adicionar Compromisso")navigation.navigate('addAppointment')
+    if(selectedItem=="Adicionar Atividade")navigation.navigate('addAppointment')
     setIsModalVisible(false);
   }
   const toggleModal = () => {

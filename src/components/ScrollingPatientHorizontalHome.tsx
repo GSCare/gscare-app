@@ -25,6 +25,13 @@ export function ScrollingPatientHorizontalHome() {
         parametro="patientCalendar"
         color="purple"
       />
+      <HomeButtonPatient
+        desc="Atendimento Atual"
+        icon="perm-contact-calendar"
+        handleButtonPress={handleButtonPress}
+        parametro="routine"
+        color="purple"
+      />
 
     </View>
   );

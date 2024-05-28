@@ -11,6 +11,7 @@ import { RegistrationActivitiesHealth } from "@components/RegistrationActivities
 import { TimeCard } from "@components/TimeCard";
 import { StatusCardRoutine } from "@components/StatusCardRoutine";
 import { StatusCardDanger } from "@components/StatusCardDanger";
+import CardQuestions from "@components/CardQuestions";
 
 interface IProps {
   date?: string
@@ -32,6 +33,17 @@ export function LastRoutine({ date }: IProps) {
         </View>
         <StatusCardDanger />
         <StatusCardRoutine />
+        <View className="m-5 flex-1">
+          <CardQuestions />
+          <CardQuestions />
+          <CardQuestions />
+          <CardQuestions />
+          <View className="w-1/2 m-auto">
+            <TouchableOpacity className='border-[1px] border-gray-300 bg-blue-500 p-2 rounded'>
+              <Text className='m-auto text-lg text-[#ffff] font-bold'>Finalizar</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
     </View>
   );

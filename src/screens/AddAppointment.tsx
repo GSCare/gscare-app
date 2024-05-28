@@ -7,9 +7,10 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 const categorias = [
-  'Saúde (não médico)',
-  'Saúde (médico)',
-  'Compras',
+  'Compromissos',
+  'Medicação',
+  'Ingestão',
+  'Higiene',
   'Lazer',
   // Adicione mais categorias conforme necessário
 ];
@@ -26,7 +27,7 @@ export function AddAppointmentScreen() {
 
   return (
     <View className='flex-1 flex-col'>
-      <PageHeader title='Adicionar Compromisso' />
+      <PageHeader title='Adicionar Atividade' />
 
       <View className='p-4'>
         <Text className='text-base mb-1 font-bold'>Categoria:</Text>
@@ -42,20 +43,20 @@ export function AddAppointmentScreen() {
         </View>
       </View>
       <View className='p-4'>
-        <Text className='text-base mb-1 font-bold'>Nome do Compromisso:</Text>
+        <Text className='text-base mb-1 font-bold'>Nome da Atividade:</Text>
         <TextInput
           value={nome}
           onChangeText={setNome}
-          placeholder="Digite o nome do compromisso"
+          placeholder="Digite o nome da atividade"
           className='border border-gray-300 p-2 rounded'
         />
       </View>
       <View className='p-4'>
-        <Text className='text-base mb-1 font-bold'>Data do Compromisso:</Text>
+        <Text className='text-base mb-1 font-bold'>Data da Atividade:</Text>
         <TextInput
           value={data}
           onChangeText={setData}
-          placeholder="Digite a data do compromisso"
+          placeholder="Digite a data da atividade"
           className='border border-gray-300 p-2 rounded'
         />
       </View>
@@ -64,7 +65,7 @@ export function AddAppointmentScreen() {
         <TextInput
           value={descricao}
           onChangeText={setDescricao}
-          placeholder="Digite a descrição do compromisso"
+          placeholder="Digite a descrição da atividade"
           multiline
           numberOfLines={4}
           className='border border-gray-300 p-2 rounded'

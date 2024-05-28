@@ -4,7 +4,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 interface IProps {
-  status: "Concluído" | "Disponível" | "Indisponível";
+  status: "Concluído" | "Disponível" | "Indisponível" | "Em Andamento";
   shift: number;
   start: string;
   end: string;
@@ -25,8 +25,10 @@ function PlantaoCard({ status, shift, start, end }: IProps) {
     backgroundColor = 'bg-blue-500';
   } else if (status === 'Concluído') {
     backgroundColor = 'bg-green-500';
+  } else if(status === 'Em Andamento'){
+    backgroundColor = 'bg-yellow-500'
   }
-  let buttonText = status === 'Disponível' ? 'Iniciar' : 'Ver';
+  let buttonText = (status == 'Concluído' || status == 'Em Andamento') ? 'Ver' : 'Iniciar';
   let buttonClasses = status === 'Indisponível' ? 'hidden' : 'flex';
   let handleFunction = status === 'Concluído' ? handleComponentLastRoutine : handleComponentRoutine;
 
