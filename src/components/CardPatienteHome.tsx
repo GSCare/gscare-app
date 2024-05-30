@@ -11,7 +11,7 @@ const CardPatienteHome = () => {
     navigation.navigate('profilePaciente')
   }
   return (
-    <View className='bg-[#6A39F1] rounded-xl shadow-2xl shadow-black p-4 mt-10 w-96'>
+    <View className='bg-[#4b7794] rounded-xl shadow-2xl shadow-[#000000] p-4 mt-10 w-96'>
       <View className='flex-col'>
         <View className='flex-row items-center'>
           <TouchableOpacity onPress={handleComponent}>

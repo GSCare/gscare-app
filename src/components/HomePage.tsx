@@ -26,13 +26,13 @@ export function HomePage() {
           <CardPatienteHome />
         </View>
         <View className='h-[230px]'>
-          <Text className='text-lg text-orange-500 font-bold ml-3'>Funcionalidades</Text>
+          <Text className='text-lg text-orange-500 font-bold ml-3'>Ferramentas do Paciente</Text>
           <View>
             <ScrollingEmployeeHorizontalHome />
           </View>
         </View>
         <View className=''>
-          <Text className='text-lg text-orange-500 font-bold ml-3'>Funcionalidades</Text>
+          <Text className='text-lg text-orange-500 font-bold ml-3'>Ferramentas do Funcionário</Text>
           <View className='items-center'>
             <ScrollingPatientHorizontalHome />
           </View>

@@ -1,36 +1,16 @@
-import { Platform, Pressable, TouchableOpacity } from "react-native";
+import { Platform } from "react-native";
 import {
   createBottomTabNavigator,
   BottomTabNavigationProp,
 } from "@react-navigation/bottom-tabs";
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { MaterialIcons } from '@expo/vector-icons';
 
 import { Home } from "@screens/Home";
-import { ClientsPathologies } from "@screens/ClientsPathologies";
-import { DailyReport } from "@screens/DailyReport";
 
-import { Settings } from "@screens/Settings";
 
-import { PatientCalendar } from "@screens/PatientCalendar";
-import { Financial } from "@screens/Financial";
-import { DailyAppointments } from "@screens/DailyAppointments";
-import { PeopleCare } from "@screens/PeopleCare";
-import { Routine } from "@screens/Routine";
-import { LastRoutine } from "@screens/LastRoutine";
-import { AddIntercurrence } from "@screens/AddIntercurrence";
-import { AddAppointmentScreen } from "@screens/AddAppointment";
-import Help from "@screens/Help";
-import { ShiftHistory } from "@screens/ShiftHistory";
-import ShoppingList from "@screens/ShoppingList";
 import { useState } from "react";
 import { AddModal } from "@components/ModalAddHome";
-import ProfilePaciente from "@screens/ProfilePaciente";
-import { CardProfileEmployee } from "@components/CardProfileEmployee";
-import { ProfileEmployee } from "@screens/ProfileEmployee";
-import { MedicamentosPacienteAtual } from "@screens/MedicamentosPacienteAtual";
-import { Alergias } from "@screens/Alergias";
 import { StackHome } from "./stackHome.routes";
 import { StackPeopleCare } from "./stackPeopleCare.routes";
 import { StackSettings } from "./stackSettings.routes";
@@ -46,7 +26,7 @@ export type AppRoutes = {
   clientsPathologies: undefined;
   dailyReport: undefined;
   dailyAppointments: undefined;
-  peopleCare: undefined;
+
 
   financial: undefined;
 
@@ -63,6 +43,7 @@ export type AppRoutes = {
   profileEmployee: undefined;
   medicamentosPacienteAtual: undefined;
   alergias: undefined;
+  peopleCare: undefined;
 };
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;

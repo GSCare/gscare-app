@@ -1,6 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons';
-import { AppRoutes } from '@routes/app.routes';
-import { Pressable, Text, View } from 'react-native';
+import { AppRoutes } from "@routes/app.routes";
+import { Pressable, Text, View } from "react-native";
 
 type AppRouteKey = keyof AppRoutes;
 
@@ -9,59 +9,41 @@ interface Props {
   handleButtonPress: (parametro: AppRouteKey) => void;
   parametro: AppRouteKey;
   icon: any | string;
-  color: 'purple' | 'orange' | 'green';
+  color: "light" | "medium" | "dark";
 }
 
-export function HomeButtonPatient({
-  desc,
-  icon,
-  handleButtonPress,
-  parametro,
-  color,
-}: Props) {
-  let colorPrimary;
-  let colorSecondary;
-  if (color === 'purple') {
-    colorPrimary = '#6A39F1';
-    colorSecondary = '#5839F1';
-  } else if (color === 'orange') {
-    colorPrimary = '#EF7B78';
-    colorSecondary = '#F08F67';
-  } else if (color === 'green') {
-    colorPrimary = '#42DB5D';
-    colorSecondary = '#3AD1A1';
-  }
+export function HomeButtonOptionTools({ desc, icon, handleButtonPress, parametro, color }: Props) {
 
+  let colorPrimary;
+  // let colorSecondary;
+  if (color == "dark") {
+    colorPrimary = "#447391"
+    // colorSecondary = "#3AD1A1"
+  }
+  if (color == "light") {
+    colorPrimary = "#639abf"
+    // colorSecondary = "#ffff"
+  }
+  if (color == "medium") {
+    colorPrimary = "#5389ae";
+    // colorSecondary = "#F08F67"
+  }
   const handleClick = () => {
     handleButtonPress(parametro);
   };
 
   return (
     <Pressable
-      style={{
-        flex: 1,
-        backgroundColor: "#ADD8E6",
-        borderRadius: 10,
-        margin: 5,
-        padding: 10,
-        paddingBottom: 30,
-      }}
+      className={`w-40 max-w-max rounded-md box-border m-2 p-4 flex-1 shadow-md shadow-[#000000bd]`}
       onPress={handleClick}
+      style={{backgroundColor: colorPrimary}}
     >
-      <View style={{ alignItems: 'center' }}>
-        <View
-          style={{
-            borderRadius: 999,
-            backgroundColor: '#fffefe1c',
-            padding: 5,
-          }}
-        >
-          <MaterialIcons name={icon} size={30} color={'#f1f5fb'} />
+      <View className='items-center'>
+        <View className='m-2 rounded-full bg-[#fffefe1c] p-4'>
+          <MaterialIcons name={icon} size={50} m={2} color={"#ffff"} />
         </View>
-        <Text style={{ color: 'white', fontWeight: 'bold', marginTop: 5 }}>
-          {desc}
-        </Text>
+        <Text className="text-center overflow-hidden text-white font-bold">{desc}</Text>
       </View>
     </Pressable>
-  );
+  )
 }
