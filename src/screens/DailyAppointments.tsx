@@ -6,7 +6,7 @@ import { ScrollView, Text, View } from "react-native";
 export function DailyAppointments() {
   return (
     <View className='flex-1 flex-col'>
-      <PageHeader title='Consultas do Dia' />
+
       <ScrollView className="">
         <View className="mx-4 my-10 flex-col flex-1">
           <View className="mb-8">

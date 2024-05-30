@@ -8,7 +8,7 @@ import CardShiftHistory from "@components/CardShiftHistory";
 export function ShiftHistory() {
   return (
     <View className="flex-1">
-      <PageHeader title="Histórico de plantões" />
+
       <View className="mt-10">
         <ScrollView>
           <CardShiftHistory data="20/04/2005" nomePlantao="Nome plantao 24hrs" statusPlantao="Plantao disponivel" />

@@ -20,7 +20,7 @@ export function PatientCalendar() {
 
   return (
     <View className="flex-col flex-1">
-      <PageHeader title='Agenda de trabalho' />
+
 
       <View className="flex-col px-10">
 

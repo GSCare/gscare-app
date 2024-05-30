@@ -8,7 +8,7 @@ const ProfilePaciente = () => {
 
   return (
     <View className='flex-1'>
-      <PageHeader title='Perfil do Paciente' />
+
       <View className='p-4'>
       <CardProfilePatient />
       </View>

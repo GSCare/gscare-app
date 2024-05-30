@@ -7,7 +7,7 @@ export function PeopleCare() {
 
   return (
     <View className='flex-col'>
-      <PageHeader title='Pacientes' />
+  
       <View className="mt-10">
         <View className="p-4">
           <SearchInput />

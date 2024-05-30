@@ -10,7 +10,7 @@ export const ProfileEmployee = () => {
 
   return (
     <View className='flex-1'>
-      <PageHeader title='Perfil do Funcionário' />
+
       <View className='p-4'>
         <CardProfileEmployee rating={5} />
       </View>

@@ -32,7 +32,6 @@ const ShoppingList: React.FC = () => {
 
   return (
     <View className="flex-1">
-      <PageHeader title="Lista de Compras" />
       <View className="mt-10 p-4">
         <TextInput
           value={item}

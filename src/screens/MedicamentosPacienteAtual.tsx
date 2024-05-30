@@ -9,7 +9,7 @@ import { CardMedicament } from "@components/CardMedicament";
 export function MedicamentosPacienteAtual() {
   return (
     <View className="flex-1">
-      <PageHeader title="Medicamentos do Paciente Atual" />
+
       <View className="mt-10">
         <ScrollView className="mx-5">
           <CardMedicament nomeMedicamento="Dorflex" doseMedicamento="5ml" horaMedicamento="20:00" />

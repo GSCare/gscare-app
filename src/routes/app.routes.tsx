@@ -31,6 +31,10 @@ import { CardProfileEmployee } from "@components/CardProfileEmployee";
 import { ProfileEmployee } from "@screens/ProfileEmployee";
 import { MedicamentosPacienteAtual } from "@screens/MedicamentosPacienteAtual";
 import { Alergias } from "@screens/Alergias";
+import { StackHome } from "./stackHome.routes";
+import { StackPeopleCare } from "./stackPeopleCare.routes";
+import { StackSettings } from "./stackSettings.routes";
+import { StackDailyReport } from "./stackDailyReport.routes";
 
 export type AppRoutes = {
   // ? rotas que ficaram no rodape
@@ -92,7 +96,7 @@ export function AppRoutes() {
 
       <Screen
         name="home"
-        component={Home}
+        component={StackHome}
         options={{
           tabBarLabel: "home",
           tabBarIcon: ({ color, size }) => (
@@ -102,7 +106,7 @@ export function AppRoutes() {
       />
       <Screen
         name="dailyReport"
-        component={DailyReport}
+        component={StackDailyReport}
         options={{
           tabBarLabel: "dailyReport",
           tabBarIcon: ({ color, size }) => (
@@ -132,7 +136,7 @@ export function AppRoutes() {
       />
       <Screen
         name="peopleCare"
-        component={PeopleCare}
+        component={StackPeopleCare}
         options={{
           tabBarLabel: "peopleCare",
           tabBarIcon: ({ color, size }) => (
@@ -142,7 +146,7 @@ export function AppRoutes() {
       />
       <Screen
         name="settings"
-        component={Settings}
+        component={StackSettings}
         options={{
           tabBarLabel: "settings",
           tabBarIcon: ({ color, size }) => (
@@ -155,82 +159,7 @@ export function AppRoutes() {
         component={DailyReport}
         options={{ tabBarButton: () => null }}
       /> */}
-      <Screen
-        name="patientCalendar"
-        component={PatientCalendar}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="dailyAppointments"
-        component={DailyAppointments}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="clientsPathologies"
-        component={ClientsPathologies}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="financial"
-        component={Financial}
-        options={{ tabBarButton: () => null }}
-      />
-
-      <Screen
-        name="routine"
-        component={Routine}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="lastRoutine"
-        component={LastRoutine}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="addIntercurrence"
-        component={AddIntercurrence}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="addAppointment"
-        component={AddAppointmentScreen}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="helpScreen"
-        component={Help}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="shiftHistory"
-        component={ShiftHistory}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="shoppingList"
-        component={ShoppingList}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="profilePaciente"
-        component={ProfilePaciente}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="profileEmployee"
-        component={ProfileEmployee}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="medicamentosPacienteAtual"
-        component={MedicamentosPacienteAtual}
-        options={{ tabBarButton: () => null }}
-      />
-      <Screen
-        name="alergias"
-        component={Alergias}
-        options={{ tabBarButton: () => null }}
-      />
+     
     </Navigator>
   );
 }

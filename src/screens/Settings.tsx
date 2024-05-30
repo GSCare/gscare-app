@@ -16,7 +16,7 @@ export const Settings = () => {
   }
   return (
     <View>
-      <PageHeader title="Settings" />
+
       <View>
         <View className='flex-col items-center mt-6'>
           <View className='h-14 w-14'>

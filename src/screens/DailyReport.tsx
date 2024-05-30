@@ -20,7 +20,7 @@ export function DailyReport() {
   ];
   return (
     <View className='flex-1 flex-col'>
-      <PageHeader title='relatório diário' />
+
       <View className="p-12 rounded-lg items-center">
         <View className="justify-center items-center">
           <Days />

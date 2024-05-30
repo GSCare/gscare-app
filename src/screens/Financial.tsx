@@ -12,7 +12,7 @@ export function Financial() {
   return (
 
     <View className="flex-1 flex-col">
-      <PageHeader title='Financeiro' />
+
       <FinancialCards />
       <View className="flex-row">
         <FilterFinancialData />

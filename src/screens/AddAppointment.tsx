@@ -27,7 +27,6 @@ export function AddAppointmentScreen() {
 
   return (
     <View className='flex-1 flex-col'>
-      <PageHeader title='Adicionar Atividade' />
 
       <View className='p-4'>
         <Text className='text-base mb-1 font-bold'>Categoria:</Text>

@@ -20,7 +20,7 @@ export function LastRoutine({ date }: IProps) {
   date = "20/04/2005"
   return (
     <View className="flex-1">
-      <PageHeader title="Última Rotina de Cuidado" />
+
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="items-center">
           <View className="w-72 items-center mt-10">

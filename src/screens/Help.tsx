@@ -21,7 +21,7 @@ const HelpScreen = () => {
 
   return (
     <View className='flex-1 flex-col'>
-      <PageHeader title='Me ajuda' />
+
       <View className='p-4 my-5'>
         <ScrollView>
           {contatos.map((contato, index) => (

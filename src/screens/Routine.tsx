@@ -18,7 +18,7 @@ import { ButtonGroup } from "react-native-elements";
 export function Routine() {
   return (
     <View className="flex-1">
-      <PageHeader title="Rotina do cliente" />
+
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="flex-col mt-10 mb-5 ml-8">
           <Text className="font-bold text-base">Rotinas</Text>

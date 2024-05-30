@@ -11,7 +11,7 @@ import { CardAlergias } from "@components/CardAlergias";
 export function Alergias() {
   return (
     <View className="flex-1">
-      <PageHeader title="Alergias do Paciente Atual" />
+
       <View className="mt-10">
         <ScrollView className="mx-5">
           <CardAlergias nomeAlergias="Mel" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit." tipoAlergia="Alimentícia" />

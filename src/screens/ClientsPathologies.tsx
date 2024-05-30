@@ -14,7 +14,7 @@ export function ClientsPathologies() {
 
   return (
     <View className="flex-1">
-      <PageHeader title="Patologias do Paciente Atual" />
+
       <View className="mt-10">
         <ScrollView className="mx-5">
           <CardPatologia nomePatologia="Alzheimer" description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."/>
