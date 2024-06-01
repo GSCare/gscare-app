@@ -5,7 +5,7 @@ import { Settings } from '@screens/Settings';
 
 
 type stackSettingsProps = {
-  settings: undefined;
+  stackSettings: undefined;
   profileEmployee: undefined;
 }
 
@@ -17,7 +17,7 @@ export function StackSettings() {
   return (
     <Navigator screenOptions={{ headerShown: true }}>
       <Screen
-        name="settings"
+        name="stackSettings"
         component={Settings}
         options={() => ({
           title: 'Configurações',

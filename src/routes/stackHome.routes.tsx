@@ -16,7 +16,7 @@ import ShoppingList from '@screens/ShoppingList';
 
 
 type stackHomeProps = {
-  home: undefined;
+  stackHome: undefined;
   signIn: undefined;
   signUp: undefined;
   patientCalendar: undefined;
@@ -45,7 +45,7 @@ export function StackHome() {
   return (
     <Navigator screenOptions={{ headerShown: true }}>
       <Screen
-        name="home"
+        name="stackHome"
         component={Home}
         options={() => ({
           title: 'GSCare',

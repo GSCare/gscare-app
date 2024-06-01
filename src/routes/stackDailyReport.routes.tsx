@@ -4,7 +4,7 @@ import { DailyReport } from '@screens/DailyReport';
 
 
 type stackDailyReportProps = {
-  dailyReport: undefined;
+  stackDailyReport: undefined;
 }
 
 export type StackDailyReportNavigatorRoutesProps = NativeStackNavigationProp<stackDailyReportProps>;
@@ -15,7 +15,7 @@ export function StackDailyReport() {
   return (
     <Navigator screenOptions={{ headerShown: true }}>
       <Screen
-        name="dailyReport"
+        name="stackDailyReport"
         component={DailyReport}
         options={() => ({
           title: 'Relatório Diário',

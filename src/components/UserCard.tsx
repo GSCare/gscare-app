@@ -5,6 +5,7 @@ import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { UserIcon } from './UserIcon';
 import { useNavigation } from '@react-navigation/native';
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
+import { StackHomeNavigatorRoutesProps } from '@routes/stackHome.routes';
 
 const UserCard = () => {
   const [showModal, setShowModal] = useState(false)
@@ -12,7 +13,7 @@ const UserCard = () => {
     setShowModal(false);
   };
 
-  const navigation = useNavigation<AppNavigatorRoutesProps>();
+  const navigation = useNavigation<StackHomeNavigatorRoutesProps>();
 
   const handleModalPress = () => {
     navigation.navigate("profilePaciente");

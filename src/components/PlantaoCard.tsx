@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
+import { StackHomeNavigatorRoutesProps } from '@routes/stackHome.routes';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
@@ -11,7 +12,7 @@ interface IProps {
 }
 
 function PlantaoCard({ status, shift, start, end }: IProps) {
-  const navigation = useNavigation<AppNavigatorRoutesProps>()
+  const navigation = useNavigation<StackHomeNavigatorRoutesProps>()
 
   function handleComponentRoutine() {
     navigation.navigate('routine')

@@ -1,14 +1,10 @@
 import React from 'react';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { AppRoutes } from '@routes/app.routes';
-import { MaterialIcons } from '@expo/vector-icons';
-import { DescPageHeader } from './DescPageHeader';
-import { HomeButtonOptionTools } from './HomeButtonOptionTools';
 import { Text, View } from 'react-native';
 import { ScrollingEmployeeHorizontalHome } from './ScrollingEmployeeHorizontalHome';
 import CardPatienteHome from './CardPatienteHome';
 import { ScrollingPatientHorizontalHome } from './ScrollingPatientHorizontalHome';
-import { HomeButtonPatient } from './HomeButtonPatient';
 
 type NavigationType = NavigationProp<AppRoutes>;
 
@@ -26,13 +22,13 @@ export function HomePage() {
           <CardPatienteHome />
         </View>
         <View className='h-[230px]'>
-          <Text className='text-lg text-orange-500 font-bold ml-3'>Ferramentas do Paciente</Text>
+          <Text className='text-lg text-[#8f8989] font-bold ml-3'>Ferramentas do Paciente</Text>
           <View>
             <ScrollingEmployeeHorizontalHome />
           </View>
         </View>
         <View className=''>
-          <Text className='text-lg text-orange-500 font-bold ml-3'>Ferramentas do Funcionário</Text>
+          <Text className='text-lg text-[#8f8989] font-bold ml-3'>Ferramentas do Funcionário</Text>
           <View className='items-center'>
             <ScrollingPatientHorizontalHome />
           </View>

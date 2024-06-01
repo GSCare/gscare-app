@@ -34,12 +34,12 @@ export function HomeButtonOptionTools({ desc, icon, handleButtonPress, parametro
 
   return (
     <Pressable
-      className={`w-40 max-w-max rounded-md box-border m-2 p-4 flex-1 shadow-md shadow-[#000000bd]`}
+      className={`w-52 max-w-max min-h-min rounded-md box-border m-2 p-4 flex-1 shadow-md shadow-[#000000bd]`}
       onPress={handleClick}
       style={{backgroundColor: colorPrimary}}
     >
-      <View className='items-center'>
-        <View className='m-2 rounded-full bg-[#fffefe1c] p-4'>
+      <View className='items-center m-auto'>
+        <View className='rounded-full bg-[#fffefe1c] p-4 items-center mb-2'>
           <MaterialIcons name={icon} size={50} m={2} color={"#ffff"} />
         </View>
         <Text className="text-center overflow-hidden text-white font-bold">{desc}</Text>

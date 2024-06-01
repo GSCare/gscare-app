@@ -12,7 +12,7 @@ export function PeopleCare() {
         <View className="p-4">
           <SearchInput />
         </View>
-        <ScrollView showsVerticalScrollIndicator={true} className="h-3/4">
+        <ScrollView showsVerticalScrollIndicator={true} className="h-full">
           <View className="mb-10">
             <View className="m-3">
               <CardPeopleCare
