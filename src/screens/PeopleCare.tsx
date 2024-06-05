@@ -6,13 +6,11 @@ import { ScrollView, TouchableOpacity, View } from "react-native";
 export function PeopleCare() {
 
   return (
-    <View className='flex-col'>
-  
-      <View className="mt-10">
-        <View className="p-4">
+    <View className='flex-col flex-1'>
+        <View className="m-4 mt-10">
           <SearchInput />
         </View>
-        <ScrollView showsVerticalScrollIndicator={true} className="h-full">
+        <ScrollView showsVerticalScrollIndicator={true} className="h-[90%]">
           <View className="mb-10">
             <View className="m-3">
               <CardPeopleCare
@@ -71,9 +69,16 @@ export function PeopleCare() {
                 rating={3}
               />
             </View>
+            <View className="m-3">
+              <CardPeopleCare
+                name="Sandra Aparecidass"
+                specialty="Cuidadora"
+                experience="8 anos de experiência"
+                rating={3}
+              />
+            </View>
           </View>
         </ScrollView>
       </View>
-    </View>
   )
 } 

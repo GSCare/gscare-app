@@ -11,8 +11,8 @@ export const AddModal = ({ visible, onClose, color }: any) => {
   const navigation = useNavigation<AppNavigatorRoutesProps>()
 
   function handleComponent() {
-    if(selectedItem=="Adicionar Intercorrência")navigation.navigate('addIntercurrence')
-    if(selectedItem=="Adicionar Atividade")navigation.navigate('addAppointment')
+    if (selectedItem == "Adicionar Intercorrência") navigation.navigate('addIntercurrence')
+    if (selectedItem == "Adicionar Atividade") navigation.navigate('addAppointment')
     setIsModalVisible(false);
   }
   const toggleModal = () => {
@@ -81,12 +81,14 @@ export const AddModal = ({ visible, onClose, color }: any) => {
           </View>
         </TouchableWithoutFeedback>
       </Modal>
-      <MaterialIcons
-        name="add"
-        size={32}
-        color={color}
-        onPress={toggleModal}
-      />
+      <TouchableOpacity className='bg-[#75c3ff] rounded-full w-14 h-14 items-center justify-center mb-8 shadow-lg shadow-black'>
+          <MaterialIcons
+            name="add"
+            size={42}
+            color={'white'}
+            onPress={toggleModal}
+          />
+      </TouchableOpacity>
     </View>
   );
 };

@@ -111,7 +111,7 @@ export function AppRoutes() {
         options={{
           tabBarLabel: "addButton",
           tabBarIcon: ({ color }) => (
-            <AddModal visible={isModalVisible} color={color} />
+            <AddModal visible={isModalVisible} color={color}/>
           ),
         }}
       />

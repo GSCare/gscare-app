@@ -8,6 +8,8 @@ import { DescPageHeader } from "@components/DescPageHeader";
 import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback } from "react-native";
 import UserCard from "@components/UserCard";
 
+import { MaterialIcons } from '@expo/vector-icons';
+
 export function PatientCalendar() {
   const [showModal, setShowModal] = useState(false);
   const handleBackgroundPress = () => {
@@ -19,38 +21,41 @@ export function PatientCalendar() {
   };
 
   return (
-    <View className="flex-col flex-1">
-
-
-      <View className="flex-col px-10">
-
-        <TodaysPatientInfo />
-
-        <View className="flex-col">
-          <Text className="pl-1 text-gray-400 font-bold"> Próximos 6 dias: </Text>
-          <View className="h-80 mt-4">
-            <ScrollView className="h-full" showsVerticalScrollIndicator={false}>
-              <View className="mb-5 h-52">
-                <UserCard />
-              </View>
-              <View className="mb-5 h-52">
-                <UserCard />
-              </View>
-              <View className="mb-5 h-52">
-                <UserCard />
-              </View>
-            </ScrollView>
-          </View>
-        </View>
-        <View className="flex-col mt-12 mb-9">
-          <TouchableOpacity onPress={() => setShowModal(true)}>
-            <ButtonComp
-              title="Definir Agenda de Atendimento"
-            />
-          </TouchableOpacity>
-          {/* Modal */}
+    <View className="flex-col flex-1 mx-4 mb-20">
+      <View className="flex-row justify-between my-6">
+        <Text className="text-2xl my-auto">Agenda de atendimento:</Text>
+        {/* <TodaysPatientInfo /> */}
+        <TouchableOpacity className='bg-[#75c3ff] rounded-full w-12 h-12 items-center justify-center shadow-lg shadow-black' onPress={() => setShowModal(true)}>
+          <MaterialIcons
+            name="add"
+            size={32}
+            color={'white'}
+          />
+        </TouchableOpacity>
+      </View>
+      <View className="flex-col flex-1 gap-4">
+        <Text className="pl-1 text-gray-400 font-bold"> Próximos 6 dias: </Text>
+        <View className="h-full">
+          <ScrollView className="h-full gap-4" showsVerticalScrollIndicator={false}>
+            <View className="h-52">
+              <UserCard />
+            </View>
+            <View className="h-52">
+              <UserCard />
+            </View>
+            <View className="h-52">
+              <UserCard />
+            </View>
+            <View className="h-52">
+              <UserCard />
+            </View>
+            <View className="h-52">
+              <UserCard />
+            </View>
+          </ScrollView>
         </View>
       </View>
+
 
       {showModal && (
         <Modal

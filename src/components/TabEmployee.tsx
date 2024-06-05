@@ -19,10 +19,10 @@ const tabs: TabProps[] = [
     title: 'Visão Geral',
     content:
       <View>
-        <View className='p-4'>
+        <View className='h-[40%]'>
           <Compliments />
         </View>
-        <View>
+        <View className='h-[50%] mx-4'>
           <Text className='text-xl font-bold p-4'>Avaliações</Text>
           <AvaliationCard />
         </View>
@@ -72,7 +72,7 @@ export const TabEmployee = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <View>
+    <View className='h-full'>
       <View style={{ flexDirection: 'row' }}>
         {tabs.map((tab, index) => (
           <TouchableOpacity
@@ -107,7 +107,7 @@ export const TabEmployee = () => {
           </TouchableOpacity>
         ))}
       </View>
-      <View style={{}}>
+      <View style={{}} className='h-1/2'>
         {tabs[activeTab].content}
       </View>
     </View>
