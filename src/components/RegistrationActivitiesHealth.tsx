@@ -48,7 +48,7 @@ export function RegistrationActivitiesHealth() {
             />
           </View>
           {/* <Button title="Aceitar" /> */}
-          <View className="flex-row justify-around ml-24 w-40">
+          <View className="flex-row justify-end gap-x-2 w-full">
             <TouchableOpacity className=" rounded-full w-8 h-8 items-center justify-center">
               <Feather name="message-circle" size={28} color="white" />
             </TouchableOpacity>

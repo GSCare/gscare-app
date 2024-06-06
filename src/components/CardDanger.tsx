@@ -34,7 +34,7 @@ export function CardDanger() {
                 <Text className="text-gray-300 mb-2 font-bold">Paciente ficou agitado e agressivo aós o café da manhã </Text>
               </View>
               {/* <Button title="Aceitar" /> */}
-              <View className="flex-row justify-around ml-24 w-40 mt-4">
+              <View className="flex-row justify-end gap-x-2 w-full">
               <TouchableOpacity className=" rounded-full w-8 h-8 items-center justify-center">
                 <Feather name="message-circle" size={28} color="white" />
               </TouchableOpacity>

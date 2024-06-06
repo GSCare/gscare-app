@@ -11,6 +11,7 @@ import { LastRoutine } from '@screens/LastRoutine';
 import { MedicamentosPacienteAtual } from '@screens/MedicamentosPacienteAtual';
 import { PatientCalendar } from '@screens/PatientCalendar';
 import ProfilePaciente from '@screens/ProfilePaciente';
+import { Routine } from '@screens/Routine';
 import { ShiftHistory } from '@screens/ShiftHistory';
 import ShoppingList from '@screens/ShoppingList';
 
@@ -245,6 +246,21 @@ export function StackHome() {
         component={DailyReport}
         options={() => ({
           title: 'Relatório diário',
+          headerTitleAlign: "center",
+          headerTitleStyle: {
+            color: '#F97316',
+            fontSize: 18
+          },
+          headerStyle: {
+            backgroundColor: "#f7fafc"
+          }
+        })}
+      />
+      <Screen
+        name="routine"
+        component={Routine}
+        options={() => ({
+          title: 'Rotina do Paciente',
           headerTitleAlign: "center",
           headerTitleStyle: {
             color: '#F97316',

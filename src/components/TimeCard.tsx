@@ -31,7 +31,7 @@ export function TimeCard() {
 
         {/* Informações do Card */}
         <View className="ml-2 flex-1 p-2">
-          <Text className="text-lg font-bold mb-2 text-[#FFFFFF] mb-10 ">Higiene Intima / Troca de Fraudas(troca de fraudas)</Text>
+          <Text className="text-lg font-bold text-[#FFFFFF] mb-10 ">Higiene Intima / Troca de Fraudas(troca de fraudas)</Text>
           {/* <Text className="text-lg font-bold mb-2 text-[#FFFFFF]">[Higiene]</Text> */}
           {/* <View className="flex flex-row gap-1">
                 <Text className="text-[#BDBDBD] mb-2 font-bold">1</Text>
@@ -39,7 +39,7 @@ export function TimeCard() {
               </View> */}
           {/* <Text className="text-[#BDBDBD] mb-4 font-bold">Via: Oral</Text> */}
           {/* <Button title="Aceitar" /> */}
-          <View className="flex-row justify-around ml-24 w-40">
+          <View className="flex-row justify-end gap-x-2 w-full">
             <TouchableOpacity className=" rounded-full w-8 h-8 items-center justify-center">
               <Feather name="message-circle" size={28} color="white" />
             </TouchableOpacity>
